@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" href="MaffsStyle.css" />
+		<script src="../GenericJS/LevelCalc.js"></script>
+		<script src="HerbloreScript.js"></script>
+		<title>OSRS Calc</title>
+    </head>
+    <body>
+		<div id="content">
+			<h2>Welcome to the herblore calculator</h2>
+			<p>Current <img alt="Herblore icon" src="https://vignette.wikia.nocookie.net/2007scape/images/0/03/Herblore_icon.png/revision/latest?cb=20180424011014" /> experience:</p>
+			<input type="number" id="CurrentExp" placeholder="0 - 200'000'000"><br />
+			<table>
+				<tr>
+					<th>Amount of Herbs</th>
+					<th>Type of potion</th>
+					<th>Grimy herb</th>
+				</tr>
+				<tr>
+					<td class="AmountOfHerb">
+						<input class="Herb" type="number" id="Guam" placeholder="Number of Guam leaf"/>
+					</td>
+					<td class="TypeOfPotion">
+						<select id="GuamType">
+							<option id="test" value="AttackPotion">Attack Potion</option>
+							<option value="GuamTars">Guam tar</option>
+						</select><br />
+					</td>
+					<td class="GrimyHerbs">
+						<input type="checkbox" id="GrimyGuam">
+					</td>
+				</tr>
+				
+				<tr>
+					<td class="AmountOfHerb">
+						<input class="Herb" type="number" id="Marrentill" placeholder="Number of Marrentill"/>
+					</td>
+					<td class="TypeOfPotion">
+						<select id="MarrentillType">
+							<option value="Antipoison">Antipoison</option>
+							<option value="MarrentillTars">Marrentill tar</option>
+						</select><br />
+					</td>
+					<td class="GrimyHerbs">
+						<input type="checkbox" id="GrimyMarrentill">
+					</td>
+				</tr>
+				
+				<tr>
+					<td class="AmountOfHerb">
+						<input class="Herb" type="number" id="Tarromin" placeholder="Number of Tarromin"/>
+					</td>
+					<td class="TypeOfPotion">
+						<select id="TarrominType">
+							<option value="Serum207">Serum 207</option>
+							<option value="StrengthPotion">Strength Potion</option>
+							<option value="TarrominTars">Tarromin tar</option>
+						</select><br />
+					</td>
+					<td class="GrimyHerbs">
+						<input type="checkbox" id="GrimyTarromin">
+					</td>
+				</tr>
+				
+				<tr>
+					<td class="AmountOfHerb">
+						<input class="Herb" type="number" id="Harralander" placeholder="Number of Harralander"/>
+					</td>
+					<td class="TypeOfPotion">
+						<select id="HarralanderType">
+							<option value="EnergyPotion">Energy Potion</option>
+							<option value="RestorePotion">Restore Potion</option>
+							<option value="CompostPotion">Compost Potion</option>
+							<option value="CombatPotion">Combat Potion</option>
+							<option value="HarralanderTars">Harralander tar</option>
+						</select><br />
+					</td>
+					<td class="GrimyHerbs">
+						<input type="checkbox" id="GrimyHarralander">
+					</td>
+				</tr>
+				
+				<tr>
+					<td class="AmountOfHerb">
+						<input class="Herb" type="number" id="Ranarr" placeholder="Number of Ranarr weed"/>
+					</td>
+					<td class="TypeOfPotion">
+						<select id="RanarrType">
+							<option value="PrayerPotion">Prayer Potion</option>
+							<option value="DefencePotion">Defence Potion</option>
+						</select><br />
+					</td>
+					<td class="GrimyHerbs">
+						<input type="checkbox" id="GrimyRanarr">
+					</td>
+				</tr>
+				
+				<tr>
+					<td class="AmountOfHerb">
+						<input class="Herb" type="number" id="Toadflax" placeholder="Number of Toadflax"/>
+					</td>
+					<td class="TypeOfPotion">
+						<select id="ToadflaxType">
+							<option value="SaradominBrew">Saradomin Brew</option>
+							<option value="AntidotePlus">Antidote+</option>
+							<option value="AgilityPotion">Agility Potion</option>
+						</select><br />
+					</td>
+					<td class="GrimyHerbs">
+						<input type="checkbox" id="GrimyToadflax">
+					</td>
+				</tr>
+				
+				<tr>
+					<td class="AmountOfHerb">
+						<input class="Herb" type="number" id="Irit" placeholder="Number of Irit leaf"/>
+					</td>
+					<td class="TypeOfPotion">
+						<select id="IritType">
+							<option value="SuperAttack">Super Attack</option>
+							<option value="SuperAntipoison">Super Antipoison</option>
+							<option value="AntidotePlusPlus">Antidote++</option>
+						</select><br />
+					</td>
+					<td class="GrimyHerbs">
+						<input type="checkbox" id="GrimyIrit">
+					</td>
+				</tr>
+				
+				<tr>
+					<td class="AmountOfHerb">
+						<input class="Herb" type="number" id="Avantoe" placeholder="Number of Avantoe"/>
+					</td>
+					<td class="TypeOfPotion">
+						<select id="AvantoeType">
+							<option value="SuperEnergyPotion">Super Energy Potion</option>
+							<option value="HunterPotion">Hunter Potion</option>
+							<option value="FishingPotion">Fishing Potion</option>
+						</select><br />
+					</td>
+					<td class="GrimyHerbs">
+						<input type="checkbox" id="GrimyAvantoe">
+					</td>
+				</tr>
+				
+				<tr>
+					<td class="AmountOfHerb">
+						<input class="Herb" type="number" id="Kwuarm" placeholder="Number of Kwuarm"/>
+					</td>
+					<td class="TypeOfPotion">
+						<select id="KwuarmType">
+							<option value="SuperStrength">Super Strength</option>
+							<option value="WeaponPoison">Weapon Poison</option>
+						</select><br />
+					</td>
+					<td class="GrimyHerbs">
+						<input type="checkbox" id="GrimyKwuarm">
+					</td>
+				</tr>
+				
+				<tr>
+					<td class="AmountOfHerb">
+						<input class="Herb" type="number" id="Snapdragon" placeholder="Number of Snapdragon"/>
+					</td>
+					<td class="TypeOfPotion">
+						<select id="SnapdragonType">
+							<option value="SuperRestore">Super Restore</option>
+						</select><br />
+					</td>
+					<td class="GrimyHerbs">
+						<input type="checkbox" id="GrimySnapdragon">
+					</td>
+				</tr>
+				
+				<tr>
+					<td class="AmountOfHerb">
+						<input class="Herb" type="number" id="Cadantine" placeholder="Number of Cadantine"/>
+					</td>
+					<td class="TypeOfPotion">
+						<select id="CadantineType">
+							<option value="SuperDefence">Super Defence</option>
+							<option value="BastionPotion">Bastion Potion</option>
+							<option value="BattlemagePotion">Battlemage Potion</option>
+						</select><br />
+					</td>
+					<td class="GrimyHerbs">
+						<input type="checkbox" id="GrimyCadantine">
+					</td>
+				</tr>
+				
+				<tr>
+					<td class="AmountOfHerb">
+						<input class="Herb" type="number" id="Lantadyme" placeholder="Number of Lantadyme"/>
+					</td>
+					<td class="TypeOfPotion">
+						<select id="LantadymeType">
+							<option value="AntifirePotion">Antifire Potion</option>
+							<option value="MagicPotion">Magic Potion</option>
+						</select><br />
+					</td>
+					<td class="GrimyHerbs">
+						<input type="checkbox" id="GrimyLantadyme">
+					</td>
+				</tr>
+				
+				<tr>
+					<td class="AmountOfHerb">
+						<input class="Herb" type="number" id="DwarfWeed" placeholder="Number of Dwarf weed"/>
+					</td>
+					<td class="TypeOfPotion">
+						<select id="DwarfWeedType">
+							<option value="RangingPotion">Ranging Potion</option>
+						</select><br />
+					</td>
+					<td class="GrimyHerbs">
+						<input type="checkbox" id="GrimyDwarfWeed">
+					</td>
+				</tr>
+				
+				<tr>
+					<td class="AmountOfHerb">
+						<input class="Herb" type="number" id="Torstol" placeholder="Number of Torstol"/>
+					</td>
+					<td class="TypeOfPotion">
+						<select id="TorstolType">
+							<option value="SuperCombatPotion">Super Combat Potion</option>
+							<option value="ZamorakBrew">Zamorak Brew</option>
+							<option value="AntivenomPlus">Anti-venom+</option>
+						</select><br />
+					</td>
+					<td class="GrimyHerbs">
+						<input type="checkbox" id="GrimyTorstol">
+					</td>
+				</tr>
+				<tr>
+					<th>Special</th>
+					<th>Type of potion</th>
+					<th>Dose of potion</th>
+				</tr>
+				<tr>
+					<td class="AmountOfSpecial">
+						<input class="Special" type="number" id="Stamina" placeholder="Number of Stamina"/>
+					</td>
+					<td class="TypeOfPotion">
+						<select>
+							<option value="StaminaPotion">Stamina Potion</option>
+						</select>
+					</td>
+					<td class="DoseOfPotion">
+						<select id="DoseOfPotionStamina">
+							<option value="4">4</option>
+							<option value="3">3</option>
+							<option value="2">2</option>
+							<option value="1">1</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class="AmountOfSpecial">
+						<input class="Special" type="number" id="SuperAntifire" placeholder="Number of Super Antifire"/>
+					</td>
+					<td class="TypeOfPotion">
+						<select>
+							<option value="SuperAntifirePotion">Super Antifire Potion</option>
+						</select>
+					</td>
+					<td>
+					</td>
+				</tr>
+				<tr>
+					<td class="AmountOfSpecial">
+						<input class="Special" type="number" id="ExtendedAntifire" placeholder="Number of Extended Antifire"/>
+					</td>
+					<td class="TypeOfPotion">
+						<select>
+							<option value="ExtendedAntifire">Extended Antifire Potion</option>
+						</select>
+					</td>
+					<td class="DoseOfPotion">
+						<select id="DoseOfPotionExtendedAntifire">
+							<option value="4">4</option>
+							<option value="3">3</option>
+							<option value="2">2</option>
+							<option value="1">1</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class="AmountOfSpecial">
+						<input class="Special" type="number" id="ExtendedSuperAntifire" placeholder="Number of Extended Super Antifire"/>
+					</td>
+					<td class="TypeOfPotion">
+						<select>
+							<option value="ExtendedSuperAntifire">Extended Super Antifire Potion</option>
+						</select>
+					</td>
+					<td class="DoseOfPotion">
+						<select id="DoseOfPotionExtendedSuperAntifire">
+							<option value="4">4</option>
+							<option value="3">3</option>
+							<option value="2">2</option>
+							<option value="1">1</option>
+						</select>
+					</td>
+				</tr>
+				
+				<tr>
+					<td class="AmountOfSpecial">
+						<input class="Special" type="number" id="Antivenom" placeholder="Number of Anti-venom"/>
+					</td>
+					<td class="TypeOfPotion">
+						<select>
+							<option value="Antivenom">Anti-venom Potion</option>
+						</select>
+					</td>
+					<td class="DoseOfPotion">
+						<select id="DoseOfPotionAntivenom">
+							<option value="4">4</option>
+							<option value="3">3</option>
+							<option value="2">2</option>
+							<option value="1">1</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+			
+			<input type="button" id="CalculateExp" value="Calculate" />
+		</div>
+		
+		<div id="response">
+			<div id="TotalExp"></div>
+			<div id="NewHerbloreLevel"></div>
+			<div id="PercentToNewLevel"></div>
+		</div>
+		
+    </body>
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Prayer Calculator</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" href="MaffsStyle.css">
+		<script src="../GenericJS/LevelCalc.js"></script>
+		<script src="PrayerScript.js"></script>
+    </head>
+    <body>
+		<div id="content">
+			<h2>Welcome to the prayer calculator</h2>
+			<p>Current <img alt="Prayer icon" src="https://vignette.wikia.nocookie.net/2007scape/images/f/f2/Prayer_icon.png/revision/latest/scale-to-width-down/21?cb=20180424010757" /> experience:</p>
+			<input type="number" id="CurrentExp" placeholder="0 - 200'000'000"><br />
+			<table>
+				<tr>
+					<th></th>
+					<th>Amount of ensouled heads</th>
+					<th></th>
+					<th>Amount of ensouled heads</th>
+				</tr>
+				<tr>
+					<td>
+						<p>Amount of <img alt="Ensouled Goblin Head" src="https://vignette.wikia.nocookie.net/2007scape/images/b/b2/Ensouled_goblin_head.png/revision/latest?cb=20160108040949" />:</p>
+					</td>
+					<td>
+						<input type="number" id="EnsouledGoblinHeadAmount" placeholder="Ensouled Goblin Heads" /><br />
+					</td>
+					<td>
+						<p>Amount of <img alt="Ensouled Monkey Head" src="https://vignette.wikia.nocookie.net/2007scape/images/b/b0/Ensouled_monkey_head.png/revision/latest?cb=20160108040951" />:</p>
+					</td>
+					<td>
+						<input type="number" id="EnsouledMonkeyHeadAmount" placeholder="Ensouled Monkey Heads" /><br />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>Amount of <img alt="Ensouled Imp Head" src="https://vignette.wikia.nocookie.net/2007scape/images/b/ba/Ensouled_imp_head.png/revision/latest?cb=20160108040950" />:</p>
+					</td>
+					<td>
+						<input type="number" id="EnsouledImpHeadAmount" placeholder="Ensouled Imp Heads" /><br />
+					</td>
+					<td>
+						<p>Amount of <img alt="Ensouled Minotaur Head" src="https://vignette.wikia.nocookie.net/2007scape/images/e/e0/Ensouled_minotaur_head.png/revision/latest?cb=20160108040951" />:</p>
+					</td>
+					<td>
+						<input type="number" id="EnsouledMiniotaurHeadAmount" placeholder="Ensouled Minotaur Heads" /><br />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>Amount of <img alt="Ensouled Scorpion Head" src="https://vignette.wikia.nocookie.net/2007scape/images/3/37/Ensouled_scorpion_head.png/revision/latest?cb=20160108040952" />:</p>
+					</td>
+					<td>
+						<input type="number" id="EnsouledScorpionHeadAmount" placeholder="Ensouled Scorpion Heads"/><br />
+					</td>
+					<td>
+						<p>Amount of <img alt="Ensouled Bear Head" src="https://vignette.wikia.nocookie.net/2007scape/images/7/7f/Ensouled_bear_head.png/revision/latest?cb=20160108040946" />:</p>
+					</td>
+					<td>
+						<input type="number" id="EnsouledBearHeadAmount" placeholder="Ensouled Bear Heads"/><br />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>Amount of <img alt="Ensouled Unicorn Head" src="https://vignette.wikia.nocookie.net/2007scape/images/9/9b/Ensouled_unicorn_head.png/revision/latest?cb=20160108040947" />:</p>
+					</td>
+					<td>
+						<input type="number" id="EnsouledUnicornHeadAmount" placeholder="Ensouled Unicorn Heads"/><br />
+					</td>
+					<td>
+						<p>Amount of <img alt="Ensouled Dog Head" src="https://vignette.wikia.nocookie.net/2007scape/images/1/1b/Ensouled_dog_head.png/revision/latest?cb=20160108040948" />:</p>
+					</td>
+					<td>
+						<input type="number" id="EnsouledDogHeadAmount" placeholder="Ensouled Dog Heads"/><br />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>Amount of <img alt="Ensouled Chaos Druid Head" src="https://vignette.wikia.nocookie.net/2007scape/images/5/50/Ensouled_chaos_druid_head.png/revision/latest?cb=20160108040947" />:</p>
+					</td>
+					<td>
+						<input type="number" id="EnsouledChaosDruidHeadAmount" placeholder="Ensouled Chaos Druid Heads"/><br />
+					</td>
+					<td>
+						<p>Amount of <img alt="Ensouled Giant Head" src="https://vignette.wikia.nocookie.net/2007scape/images/1/1f/Ensouled_giant_head.png/revision/latest?cb=20160108040949" />:</p>
+					</td>
+					<td>
+						<input type="number" id="EnsouledGiantHeadAmount" placeholder="Ensouled Giant Heads"/><br />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>Amount of <img alt="Ensouled Ogre Head" src="https://vignette.wikia.nocookie.net/2007scape/images/9/90/Ensouled_ogre_head.png/revision/latest?cb=20160108040952" />:</p>
+					</td>
+					<td>
+						<input type="number" id="EnsouledOgreHeadAmount" placeholder="Ensouled Ogre Heads"/><br />
+					</td>
+					<td>
+						<p>Amount of <img alt="Ensouled Elf Head" src="https://vignette.wikia.nocookie.net/2007scape/images/3/32/Ensouled_elf_head.png/revision/latest?cb=20160108040949" />:</p>
+					</td>
+					<td>
+						<input type="number" id="EnsouledElfHeadAmount" placeholder="Ensouled Elf Heads"/><br />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>Amount of <img alt="Ensouled Troll Head" src="https://vignette.wikia.nocookie.net/2007scape/images/3/30/Ensouled_troll_head.png/revision/latest?cb=20160108040952" />:</p>
+					</td>
+					<td>
+						<input type="number" id="EnsouledTrollHeadAmount" placeholder="Ensouled Troll Heads"/><br />
+					</td>
+					<td>
+						<p>Amount of <img alt="Ensouled Horror Head" src="https://vignette.wikia.nocookie.net/2007scape/images/6/6c/Ensouled_horror_head.png/revision/latest?cb=20160108040950" />:</p>
+					</td>
+					<td>
+						<input type="number" id="EnsouledHorrorHeadAmount" placeholder="Ensouled Horror Heads"/><br />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>Amount of <img alt="Ensouled Kalphite Head" src="https://vignette.wikia.nocookie.net/2007scape/images/1/11/Ensouled_kalphite_head.png/revision/latest?cb=20160108040951" />:</p>
+					</td>
+					<td>
+						<input type="number" id="EnsouledKalphiteHeadAmount" placeholder="Ensouled Kalphite Heads"/><br />
+					</td>
+					<td>
+						<p>Amount of <img alt="Ensouled Dagannoth Head" src="https://vignette.wikia.nocookie.net/2007scape/images/3/37/Ensouled_dagannoth_head.png/revision/latest?cb=20160108040947" />:</p>
+					</td>
+					<td>
+						<input type="number" id="EnsouledDagannothHeadAmount" placeholder="Ensouled Dagannoth Heads"/><br />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>Amount of <img alt="Ensouled Bloodveld Head" src="https://vignette.wikia.nocookie.net/2007scape/images/6/68/Ensouled_bloodveld_head.png/revision/latest?cb=20160108040946" />:</p>
+					</td>
+					<td>
+						<input type="number" id="EnsouledBloodveldHeadAmount" placeholder="Ensouled Bloodveld Heads"/><br />
+					</td>
+					<td>
+						<p>Amount of <img alt="Ensouled TzHaar Head" src="https://vignette.wikia.nocookie.net/2007scape/images/f/fe/Ensouled_tzhaar_head.png/revision/latest?cb=20160108040946" />:</p>
+					</td>
+					<td>
+						<input type="number" id="EnsouledTzHaarHeadAmount" placeholder="Ensouled TzHaar Heads"/><br />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>Amount of <img alt="Ensouled Demon Head" src="https://vignette.wikia.nocookie.net/2007scape/images/b/b2/Ensouled_demon_head.png/revision/latest?cb=20160108040948" />:</p>
+					</td>
+					<td>
+						<input type="number" id="EnsouledDemonHeadAmount" placeholder="Ensouled Demon Heads"/><br />
+					</td>
+					<td>
+						<p>Amount of <img alt="Ensouled Aviansie Head" src="https://vignette.wikia.nocookie.net/2007scape/images/6/6e/Ensouled_aviansie_head.png/revision/latest?cb=20160108040946" />:</p>
+					</td>
+					<td>
+						<input type="number" id="EnsouledAviansieHeadAmount" placeholder="Ensouled Aviansie Heads"/><br />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p>Amount of <img alt="Ensouled Abyssal Head" src="https://vignette.wikia.nocookie.net/2007scape/images/1/19/Ensouled_abyssal_head.png/revision/latest?cb=20160108040945" />:</p>
+					</td>
+					<td>
+						<input type="number" id="EnsouledAbyssalHeadAmount" placeholder="Ensouled Abyssal Heads"/><br />
+					</td>
+					<td>
+						<p>Amount of <img alt="Ensouled Dragon Head" src="https://vignette.wikia.nocookie.net/2007scape/images/b/bb/Ensouled_dragon_head.png/revision/latest?cb=20160108040948" />:</p>
+					</td>
+					<td>
+						<input type="number" id="EnsouledDragonHeadAmount" placeholder="Ensouled Dragon Heads"/><br />
+					</td>
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<th>Amount of bones</th>
+					<th>Type of bones</th>
+					<th>Type of experience</th>
+				</tr>
+				<tr>
+					<td>
+						<input class="boneInput" type="number" id="AmountOfBones1" placeholder="Amount of bones"/>
+					</td>
+					<td>
+						<select class="TypeOfBone" id="TypeOfBones1">
+							<option value="None">None</option>
+							<option value="BigBones">Big Bones</option>
+							<option value="BabyDragonBones">BabyDragon Bones</option>
+							<option value="DragonBones">Dragon Bones</option>
+							<option value="DagannothBones">Dagannoth Bones</option>
+							<option value="SuperiorDragonBones">Superior Dragon Bones</option>
+						</select>
+					</td>
+					<td>
+						<select id="TypeOfExp1">
+							<option value="None">None</option>
+							<option value="Ectofuntus">Ectofuntus</option>
+							<option value="GildedAltar">Gilded Altar</option>
+							<option value="Bury">Bury</option>
+						</select><br />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input class="boneInput TypeOfBone" type="number" id="AmountOfBones2" placeholder="Amount of bones"/>
+					</td>
+					<td>
+						<select id="TypeOfBones2">
+							<option value="None">None</option>
+							<option value="BigBones">Big Bones</option>
+							<option value="BabyDragonBones">BabyDragon Bones</option>
+							<option value="DragonBones">Dragon Bones</option>
+							<option value="DagannothBones">Dagannoth Bones</option>
+							<option value="SuperiorDragonBones">Superior Dragon Bones</option>
+						</select>
+					</td>
+					<td>
+						<select id="TypeOfExp2">
+							<option value="None">None</option>
+							<option value="Ectofuntus">Ectofuntus</option>
+							<option value="GildedAltar">Gilded Altar</option>
+							<option value="Bury">Bury</option>
+						</select><br />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input class="boneInput" type="number" id="AmountOfBones3" placeholder="Amount of bones"/>
+					</td>
+					<td>
+						<select class="TypeOfBone" id="TypeOfBones3">
+							<option value="None">None</option>
+							<option value="BigBones">Big Bones</option>
+							<option value="BabyDragonBones">BabyDragon Bones</option>
+							<option value="DragonBones">Dragon Bones</option>
+							<option value="DagannothBones">Dagannoth Bones</option>
+							<option value="SuperiorDragonBones">Superior Dragon Bones</option>
+						</select>
+					</td>
+					<td>
+						<select id="TypeOfExp3">
+							<option value="None">None</option>
+							<option value="Ectofuntus">Ectofuntus</option>
+							<option value="GildedAltar">Gilded Altar</option>
+							<option value="Bury">Bury</option>
+						</select><br />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input class="boneInput TypeOfBone" type="number" id="AmountOfBones4" placeholder="Amount of bones"/>
+					</td>
+					<td>
+						<select id="TypeOfBones4">
+							<option value="None">None</option>
+							<option value="BigBones">Big Bones</option>
+							<option value="BabyDragonBones">BabyDragon Bones</option>
+							<option value="DragonBones">Dragon Bones</option>
+							<option value="DagannothBones">Dagannoth Bones</option>
+							<option value="SuperiorDragonBones">Superior Dragon Bones</option>
+						</select>
+					</td>
+					<td>
+						<select id="TypeOfExp4">
+							<option value="None">None</option>
+							<option value="Ectofuntus">Ectofuntus</option>
+							<option value="GildedAltar">Gilded Altar</option>
+							<option value="Bury">Bury</option>
+						</select><br />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input class="boneInput TypeOfBone" type="number" id="AmountOfBones5" placeholder="Amount of bones"/>
+					</td>
+					<td>
+						<select id="TypeOfBones5">
+							<option value="None">None</option>
+							<option value="BigBones">Big Bones</option>
+							<option value="BabyDragonBones">BabyDragon Bones</option>
+							<option value="DragonBones">Dragon Bones</option>
+							<option value="DagannothBones">Dagannoth Bones</option>
+							<option value="SuperiorDragonBones">Superior Dragon Bones</option>
+						</select>
+					</td>
+					<td>
+						<select id="TypeOfExp5">
+							<option value="None">None</option>
+							<option value="Ectofuntus">Ectofuntus</option>
+							<option value="GildedAltar">Gilded Altar</option>
+							<option value="Bury">Bury</option>
+						</select><br />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input class="boneInput TypeOfBone" type="number" id="AmountOfBones6" placeholder="Amount of bones"/>
+					</td>
+					<td>
+						<select id="TypeOfBones6">
+							<option value="None">None</option>
+							<option value="BigBones">Big Bones</option>
+							<option value="BabyDragonBones">BabyDragon Bones</option>
+							<option value="DragonBones">Dragon Bones</option>
+							<option value="DagannothBones">Dagannoth Bones</option>
+							<option value="SuperiorDragonBones">Superior Dragon Bones</option>
+						</select>
+					</td>
+					<td>
+						<select id="TypeOfExp6">
+							<option value="None">None</option>
+							<option value="Ectofuntus">Ectofuntus</option>
+							<option value="GildedAltar">Gilded Altar</option>
+							<option value="Bury">Bury</option>
+						</select><br />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input class="boneInput TypeOfBone" type="number" id="AmountOfBones7" placeholder="Amount of bones"/>
+					</td>
+					<td>
+						<select id="TypeOfBones7">
+							<option value="None">None</option>
+							<option value="BigBones">Big Bones</option>
+							<option value="BabyDragonBones">BabyDragon Bones</option>
+							<option value="DragonBones">Dragon Bones</option>
+							<option value="DagannothBones">Dagannoth Bones</option>
+							<option value="SuperiorDragonBones">Superior Dragon Bones</option>
+						</select>
+					</td>
+					<td>
+						<select id="TypeOfExp7">
+							<option value="None">None</option>
+							<option value="Ectofuntus">Ectofuntus</option>
+							<option value="GildedAltar">Gilded Altar</option>
+							<option value="Bury">Bury</option>
+						</select><br />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input class="boneInput TypeOfBone" type="number" id="AmountOfBones8" placeholder="Amount of bones"/>
+					</td>
+					<td>
+						<select id="TypeOfBones8">
+							<option value="None">None</option>
+							<option value="BigBones">Big Bones</option>
+							<option value="BabyDragonBones">BabyDragon Bones</option>
+							<option value="DragonBones">Dragon Bones</option>
+							<option value="DagannothBones">Dagannoth Bones</option>
+							<option value="SuperiorDragonBones">Superior Dragon Bones</option>
+						</select>
+					</td>
+					<td>
+						<select id="TypeOfExp8">
+							<option value="None">None</option>
+							<option value="Ectofuntus">Ectofuntus</option>
+							<option value="GildedAltar">Gilded Altar</option>
+							<option value="Bury">Bury</option>
+						</select><br />
+					</td>
+				</tr>
+			</table>
+			<input type="button" id="CalculateExp" value="Calculate" />
+			
+		</div>
+		
+		<div id="response">
+				<div id="TotalExp"></div>
+				<div id="NewPrayerLevel"></div>
+				<div id="Runes"></div>
+		</div>
+		
+    </body>
+</html>
