@@ -36,3 +36,8 @@ footer {
 	text-align: center;
 }
 
+img {
+	height: 1em;
+	width: auto;
+	padding-right: 5px;
+}
