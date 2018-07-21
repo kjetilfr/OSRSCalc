@@ -160,39 +160,28 @@ function CalculateIndividualSpecialExp(TypeOfSpecial) {
 	var AmountOfDoses = 1;
     //get the dose of potion from the document
     var AmountOfDoseType = document.getElementById("DoseOfPotion" + TypeOfSpecial);
+	var AmountOfPotions = document.getElementsByClassName("Special");
     //Check if xp is based on doses
     if (AmountOfDoseType === null) {
 		AmountOfDoses = 1;
 	}else {
 		//find the selected index
-        AmountOfDoses = AmountOfDoseType.options[
-			AmountOfDoseType.selectedIndex
-		].value;
+        AmountOfDoses = AmountOfDoseType.options[AmountOfDoseType.selectedIndex].value;
 	}//Stamina potion
     if (TypeOfSpecial === "Stamina") {
-		return Stamina[
-			"Stamina"
-		]* AmountOfDoses;
+		return Stamina["Stamina"] * AmountOfDoses * AmountOfPotions[0].value;
 	}//Super antifire potion
     if (TypeOfSpecial === "SuperAntifire") {
-		return SuperAntifire[
-			"SuperAntifire"
-		]* AmountOfDoses;
+		return SuperAntifire["SuperAntifire"] * AmountOfPotions[1].value;
 	}//Extended antifire potion
     if (TypeOfSpecial === "ExtendedAntifire") {
-		return ExtendedAntifire[
-			"ExtendedAntifire"
-		]* AmountOfDoses;
+		return ExtendedAntifire["ExtendedAntifire"] * AmountOfDoses * AmountOfPotions[2].value;
 	}//Extended Super antifire potion
     if (TypeOfSpecial === "ExtendedSuperAntifire") {
-		return ExtendedSuperAntifire[
-			"ExtendedSuperAntifire"
-		]* AmountOfDoses;
+		return ExtendedSuperAntifire["ExtendedSuperAntifire"] * AmountOfDoses * AmountOfPotions[3].value;
 	}//Anti-venom potion
     if (TypeOfSpecial === "Antivenom") {
-		return Antivenom[
-			"Antivenom"
-		]* AmountOfDoses;
+		return Antivenom["Antivenom"]* AmountOfDoses * AmountOfPotions[4].value;
 	}
 }function CalculateIndividualHerbExp(TypeOfHerb,
 AmountOfHerb) {
