@@ -231,9 +231,15 @@ function PercentToNewLevel(xp) {
 			continue;
 		}
 		else {
-			//Current experience minus the previous lvl experience to get the current % repeat for next lvl
-			//To get the % to next level from the current experience instead of % to next level from total experience
-			return ((xp - experienceArray[i-1]) / (experienceArray[i] - experienceArray[i-1]) * 100).toFixed(2);
+			//Check if exp is equal to the exact lvl experience
+			if (xp === experienceArray[i]) {
+				return 0;
+			}
+			else {
+				//Current experience minus the previous lvl experience to get the current % repeat for next lvl
+				//To get the % to next level from the current experience instead of % to next level from total experience
+				return ((xp - experienceArray[i-1]) / (experienceArray[i] - experienceArray[i-1]) * 100).toFixed(2);
+			}
 		}
 	}
 }

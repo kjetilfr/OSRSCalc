@@ -9,6 +9,6 @@ Coming:
 - Connecting to osrs ge via API
 - Virtual levels (not 100%)
 
-Website can be found @ 178.128.38.38.
+Website can be found @ https://kjetilfr.github.io/OSRSCalc
 
 Feel free to use my code, if your service is free.
