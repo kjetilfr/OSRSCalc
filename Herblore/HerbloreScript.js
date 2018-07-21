@@ -155,7 +155,8 @@ function CalculateExp() {
     document.getElementById("TotalExp").innerHTML = "New total experience: " + NewTotalExp;
     var NewLevel = CalculateNewLevel(CurrentExp,ExperienceGained, "Herblore");
     document.getElementById("NewHerbloreLevel").innerHTML = "New herblore level: " + NewLevel + ", " + PercentToNewLevel(NewTotalExp) + "% to level " + (NewLevel + 1);
-}function PercentToNewLevel(TotalExp) {}function CalculateIndividualSpecialExp(TypeOfSpecial) {
+}
+function CalculateIndividualSpecialExp(TypeOfSpecial) {
 	var AmountOfDoses = 1;
     //get the dose of potion from the document
     var AmountOfDoseType = document.getElementById("DoseOfPotion" + TypeOfSpecial);

@@ -335,17 +335,21 @@ window.onload = run;
 					totalSoulRunes += EnsouledDragon.runes.Soul * DragonHeadInput.value;
 					totalNatureRunes += EnsouledDragon.runes.Nature * DragonHeadInput.value;
 					totalBloodRunes += EnsouledDragon.runes.Blood * DragonHeadInput.value;
-	}document.getElementById("TotalExp").innerHTML = (parseInt(totalExpGained) + parseInt(CurrentExp) + Bones()) + " prayer experience";
-				document.getElementById("NewPrayerLevel").innerHTML = "Your new prayer level is " + CalculateNewLevel(CurrentExp, totalExpGained, "Prayer");
-				var soulRuneImg = "<img alt='Picture of a soul rune' src='https://vignette.wikia.nocookie.net/2007scape/images/9/9b/Soul_rune.png/revision/latest/scale-to-width-down/20?cb=20151107053235' />";
-				var natureRuneImg = "<img alt='Picture of a nature rune' src='https://vignette.wikia.nocookie.net/2007scape/images/8/88/Nature_rune.png/revision/latest/scale-to-width-down/20?cb=20151107053234' />"
-				var bodyRuneImg = "<img alt='Picture of a body rune' src='https://vignette.wikia.nocookie.net/2007scape/images/f/f5/Body_rune.png/revision/latest/scale-to-width-down/20?cb=20151107053228' />"
-				var bloodRuneImg = "<img alt='Picture of a blood rune' src='https://vignette.wikia.nocookie.net/2007scape/images/2/2a/Blood_rune.png/revision/latest/scale-to-width-down/20?cb=20151107053228' />"
-				document.getElementById("Runes").innerHTML = "You will need " + totalSoulRunes + " " + soulRuneImg + ", " + totalNatureRunes + " " + natureRuneImg + ", " + totalBodyRunes + " " + bodyRuneImg + ", " + totalBloodRunes + " " + bloodRuneImg + ".";
-}function CalculateExp(AmountOfHeads,
-EnsouledHeadExp) {
+	}
+	var NewTotalExp = (parseInt(totalExpGained) + parseInt(CurrentExp) + Bones());
+	document.getElementById("TotalExp").innerHTML = NewTotalExp + " prayer experience";
+	var NewLevel = CalculateNewLevel(CurrentExp, totalExpGained, "Prayer");
+	document.getElementById("NewPrayerLevel").innerHTML = "Your new prayer level is " + NewLevel + ", " + PercentToNewLevel(NewTotalExp) + "% to level " + (NewLevel + 1);
+	var soulRuneImg = "<img alt='Picture of a soul rune' src='https://vignette.wikia.nocookie.net/2007scape/images/9/9b/Soul_rune.png/revision/latest/scale-to-width-down/20?cb=20151107053235' />";
+	var natureRuneImg = "<img alt='Picture of a nature rune' src='https://vignette.wikia.nocookie.net/2007scape/images/8/88/Nature_rune.png/revision/latest/scale-to-width-down/20?cb=20151107053234' />"
+	var bodyRuneImg = "<img alt='Picture of a body rune' src='https://vignette.wikia.nocookie.net/2007scape/images/f/f5/Body_rune.png/revision/latest/scale-to-width-down/20?cb=20151107053228' />"
+	var bloodRuneImg = "<img alt='Picture of a blood rune' src='https://vignette.wikia.nocookie.net/2007scape/images/2/2a/Blood_rune.png/revision/latest/scale-to-width-down/20?cb=20151107053228' />"
+	document.getElementById("Runes").innerHTML = "You will need " + totalSoulRunes + " " + soulRuneImg + ", " + totalNatureRunes + " " + natureRuneImg + ", " + totalBodyRunes + " " + bodyRuneImg + ", " + totalBloodRunes + " " + bloodRuneImg + ".";
+}
+function CalculateExp(AmountOfHeads, EnsouledHeadExp) {
 	return AmountOfHeads * EnsouledHeadExp;
-}function Bones() {
+}
+function Bones() {
 	//Find all the Amount of bones that is used
 				var countAmountOfBones = document.getElementsByClassName("TypeOfBone").length;
 				var totalBoneExperience = 0;

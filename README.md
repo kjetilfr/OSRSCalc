@@ -7,5 +7,6 @@ Coming:
 - Better GUI
 - More skills
 - Connecting to osrs ge via API
+- Virtual levels (not 100%)
 
 Website can be found @ 178.128.38.38.
