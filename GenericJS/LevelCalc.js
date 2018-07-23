@@ -18,6 +18,10 @@ function CalculateNewLevel(CurrentExp, totalExpGained, skill) {
 		var newExp = (parseInt(CurrentExp) + parseInt(totalExpGained) + Bones());
 	}
 	
+	if (skill === "Construction") {
+		var newExp = (parseInt(CurrentExp) + parseInt(totalExpGained));
+	}
+	
 	if (isNaN(newExp) === true) {
 		alert("Something went wrong");
 		return 0;

@@ -1,9 +1,12 @@
 window.onload = run;
+
 function run() {
 	document.getElementById("CalculateExp").onclick = function() {
 		CalculateExp()
 	};
-}//Herbs
+}
+
+//Herbs
 var CurrentExp = 0;
 var Guam = {
 	Clean: 2.5,
@@ -82,6 +85,7 @@ var Torstol = {
 	AntivenomPlus: 125,
 	ZamorakBrew: 175
 };
+
 //Special
 var Stamina = {
 	Stamina: 25.5
@@ -98,6 +102,7 @@ var ExtendedSuperAntifire = {
 var Antivenom = {
 	Antivenom: 30
 };
+
 function CalculateExp() {
 	//Check currentExp value (set to 0 if empty(
     CurrentExp = document.getElementById("CurrentExp").value;
@@ -107,48 +112,27 @@ function CalculateExp() {
     //Go through the HERBS and calculate xp gained
     var countAmountOfHerbs = document.getElementsByClassName("Herb").length;
     for (i = 0; i < countAmountOfHerbs; i++) {
-		if (document.getElementsByClassName("Herb")[
-			i
-		].value === null || document.getElementsByClassName("Herb")[
-			i
-		].value === 0 || document.getElementsByClassName("Herb")[
-			i
-		].value === "") {
+		if (document.getElementsByClassName("Herb")[i].value === null || document.getElementsByClassName("Herb")[i].value === 0 || document.getElementsByClassName("Herb")[i].value === "") {
 			ExperienceGained += 0;
             continue;
 		}else {
 			//Calculate potion experience
-            ExperienceGained += CalculateIndividualHerbExp(document.getElementsByClassName("Herb")[
-				i
-			].id,
-			document.getElementsByClassName("Herb")[
-				i
-			].value);
+            ExperienceGained += CalculateIndividualHerbExp(document.getElementsByClassName("Herb")[i].id,
+			document.getElementsByClassName("Herb")[i].value);
             //Calculate grimy experience
-            ExperienceGained += CalculateGrimyExp(document.getElementsByClassName("Herb")[
-				i
-			].id,
-			document.getElementsByClassName("Herb")[
-				i
-			].value);
+            ExperienceGained += CalculateGrimyExp(document.getElementsByClassName("Herb")[i].id,
+			document.getElementsByClassName("Herb")[i].value);
 		}
 	}//Go through the SPECIAL and calculate xp gained
     var countAmountOfSpecial = document.getElementsByClassName("Special").length;
     for (i = 0; i < countAmountOfSpecial; i++) {
-		if (document.getElementsByClassName("Special")[
-			i
-		].value === null || document.getElementsByClassName("Special")[
-			i
-		].value === 0 || document.getElementsByClassName("Special")[
-			i
-		].value === "") {
+		if (document.getElementsByClassName("Special")[i].value === null || document.getElementsByClassName("Special")[i].value === 0 || document.getElementsByClassName("Special")[i].value === "") {
 			ExperienceGained += 0;
             continue;
-		}else {
+		}
+		else {
 			//Calculate potion experience
-            ExperienceGained += CalculateIndividualSpecialExp(document.getElementsByClassName("Special")[
-				i
-			].id);
+            ExperienceGained += CalculateIndividualSpecialExp(document.getElementsByClassName("Special")[i].id);
 		}
 	}//Output stuff
     var NewTotalExp = (parseInt(CurrentExp) + parseInt(ExperienceGained));
@@ -156,6 +140,7 @@ function CalculateExp() {
     var NewLevel = CalculateNewLevel(CurrentExp,ExperienceGained, "Herblore");
     document.getElementById("NewHerbloreLevel").innerHTML = "New herblore level: " + NewLevel + ", " + PercentToNewLevel(NewTotalExp) + "% to level " + (NewLevel + 1);
 }
+
 function CalculateIndividualSpecialExp(TypeOfSpecial) {
 	var AmountOfDoses = 1;
     //get the dose of potion from the document
@@ -183,321 +168,225 @@ function CalculateIndividualSpecialExp(TypeOfSpecial) {
     if (TypeOfSpecial === "Antivenom") {
 		return Antivenom["Antivenom"]* AmountOfDoses * AmountOfPotions[4].value;
 	}
-}function CalculateIndividualHerbExp(TypeOfHerb,
-AmountOfHerb) {
+}
+
+function CalculateIndividualHerbExp(TypeOfHerb, AmountOfHerb) {
 	var AmountOfHerbs = parseInt(AmountOfHerb);
     //Things you can make with Guam
     if (TypeOfHerb === "Guam") {
 		var GuamType = document.getElementById("GuamType").value;
         if (GuamType === "AttackPotion") {
-			return Guam[
-				"AttackPotion"
-			]* AmountOfHerbs;
+			return Guam["AttackPotion"]* AmountOfHerbs;
 		}if (GuamType === "GuamTars") {
-			return Guam[
-				"GuamTars"
-			]* AmountOfHerbs;
+			return Guam["GuamTars"]* AmountOfHerbs;
 		}
 	}//Things you can make with Marrentill
     if (TypeOfHerb === "Marrentill") {
 		var MarrentillType = document.getElementById("MarrentillType").value;
         if (MarrentillType === "Antipoison") {
-			return Marrentill[
-				"Antipoison"
-			]* AmountOfHerbs;
+			return Marrentill["Antipoison"]* AmountOfHerbs;
 		}if (MarrentillType === "MarrentillTars") {
-			return Marrentill[
-				"MarrentillTars"
-			]* AmountOfHerbs;
+			return Marrentill["MarrentillTars"]* AmountOfHerbs;
 		}
 	}//Things you can make with Tarromin
     if (TypeOfHerb === "Tarromin") {
 		var TarrominType = document.getElementById("TarrominType").value;
         if (TarrominType === "StrengthPotion") {
-			return Tarromin[
-				"StrengthPotion"
-			]* AmountOfHerbs;
+			return Tarromin["StrengthPotion"]* AmountOfHerbs;
 		}if (TarrominType === "Serum207") {
-			return Tarromin[
-				"Serum207"
-			]* AmountOfHerbs;
+			return Tarromin["Serum207"]* AmountOfHerbs;
 		}if (TarrominType === "TarrominTars") {
-			return Tarromin[
-				"TarrominTars"
-			]* AmountOfHerbs;
+			return Tarromin["TarrominTars"]* AmountOfHerbs;
 		}
 	}//Things you can make with Harralander
     if (TypeOfHerb === "Harralander") {
 		var HarralanderType = document.getElementById("HarralanderType").value;
         if (HarralanderType === "EnergyPotion") {
-			return Harralander[
-				"EnergyPotion"
-			]* AmountOfHerbs;
+			return Harralander["EnergyPotion"]* AmountOfHerbs;
 		}if (HarralanderType === "CompostPotion") {
-			return Harralander[
-				"CompostPotion"
-			]* AmountOfHerbs;
+			return Harralander["CompostPotion"]* AmountOfHerbs;
 		}if (HarralanderType === "RestorePotion") {
-			return Harralander[
-				"RestorePotion"
-			]* AmountOfHerbs;
+			return Harralander["RestorePotion"]* AmountOfHerbs;
 		}if (HarralanderType === "CombatPotion") {
-			return Harralander[
-				"CombatPotion"
-			]* AmountOfHerbs;
+			return Harralander["CombatPotion"]* AmountOfHerbs;
 		}if (HarralanderType === "HarralanderTars") {
-			return Harralander[
-				"HarralanderTars"
-			]* AmountOfHerbs;
+			return Harralander["HarralanderTars"]* AmountOfHerbs;
 		}
 	}//Things you can make with Ranarr
     if (TypeOfHerb === "Ranarr") {
 		var RanarrType = document.getElementById("RanarrType").value;
         if (RanarrType === "PrayerPotion") {
-			return Ranarr[
-				"PrayerPotion"
-			]* AmountOfHerbs;
+			return Ranarr["PrayerPotion"]* AmountOfHerbs;
 		}if (RanarrType === "DefencePotion") {
-			return Ranarr[
-				"DefencePotion"
-			]* AmountOfHerbs;
+			return Ranarr["DefencePotion"]* AmountOfHerbs;
 		}
 	}//Things you can make with Toadflax
     if (TypeOfHerb === "Toadflax") {
 		var ToadflaxType = document.getElementById("ToadflaxType").value;
         if (ToadflaxType === "SaradominBrew") {
-			return Toadflax[
-				"SaradominBrew"
-			]* AmountOfHerbs;
+			return Toadflax["SaradominBrew"]* AmountOfHerbs;
 		}if (ToadflaxType === "AntidotePlus") {
-			return Toadflax[
-				"AntidotePlus"
-			]* AmountOfHerbs;
+			return Toadflax["AntidotePlus"]* AmountOfHerbs;
 		}if (ToadflaxType === "AgilityPotion") {
-			return Toadflax[
-				"AgilityPotion"
-			]* AmountOfHerbs;
+			return Toadflax["AgilityPotion"]* AmountOfHerbs;
 		}
 	}//Things you can make with Irit
     if (TypeOfHerb === "Irit") {
 		var IritType = document.getElementById("IritType").value;
         if (IritType === "SuperAttack") {
-			return Irit[
-				"SuperAttack"
-			]* AmountOfHerbs;
+			return Irit["SuperAttack"]* AmountOfHerbs;
 		}if (IritType === "SuperAntipoison") {
-			return Irit[
-				"SuperAntipoison"
-			]* AmountOfHerbs;
+			return Irit["SuperAntipoison"]* AmountOfHerbs;
 		}if (IritType === "AntidotePlusPlus") {
-			return Irit[
-				"AntidotePlusPlus"
-			]* AmountOfHerbs;
+			return Irit["AntidotePlusPlus"]* AmountOfHerbs;
 		}
 	}//Things you can make with Avantoe
     if (TypeOfHerb === "Avantoe") {
 		var AvantoeType = document.getElementById("AvantoeType").value;
         if (AvantoeType === "SuperEnergyPotion") {
-			return Avantoe[
-				"SuperEnergyPotion"
-			]* AmountOfHerbs;
+			return Avantoe["SuperEnergyPotion"]* AmountOfHerbs;
 		}if (AvantoeType === "FishingPotion") {
-			return Avantoe[
-				"FishingPotion"
-			]* AmountOfHerbs;
+			return Avantoe["FishingPotion"]* AmountOfHerbs;
 		}if (AvantoeType === "HunterPotion") {
-			return Avantoe[
-				"HunterPotion"
-			]* AmountOfHerbs;
+			return Avantoe["HunterPotion"]* AmountOfHerbs;
 		}
 	}//Things you can make with Kwuarm
     if (TypeOfHerb === "Kwuarm") {
 		var KwuarmType = document.getElementById("KwuarmType").value;
         if (KwuarmType === "SuperStrength") {
-			return Kwuarm[
-				"SuperStrength"
-			]* AmountOfHerbs;
+			return Kwuarm["SuperStrength"]* AmountOfHerbs;
 		}if (KwuarmType === "WeaponPoison") {
-			return Kwuarm[
-				"WeaponPoison"
-			]* AmountOfHerbs;
+			return Kwuarm["WeaponPoison"]* AmountOfHerbs;
 		}
 	}//Things you can make with Snapdragon
     if (TypeOfHerb === "Snapdragon") {
 		var SnapdragonType = document.getElementById("SnapdragonType").value;
         if (SnapdragonType === "SuperRestore") {
-			return Snapdragon[
-				"SuperRestore"
-			]* AmountOfHerbs;
+			return Snapdragon["SuperRestore"]* AmountOfHerbs;
 		}
 	}//Things you can make with Cadantine
     if (TypeOfHerb === "Cadantine") {
 		var CadantineType = document.getElementById("CadantineType").value;
         if (CadantineType === "SuperDefence") {
-			return Cadantine[
-				"SuperDefence"
-			]* AmountOfHerbs;
+			return Cadantine["SuperDefence"]* AmountOfHerbs;
 		}if (CadantineType === "BastionPotion") {
-			return Cadantine[
-				"BastionPotion"
-			]* AmountOfHerbs;
+			return Cadantine["BastionPotion"]* AmountOfHerbs;
 		}if (CadantineType === "BattlemagePotion") {
-			return Cadantine[
-				"BattlemagePotion"
-			]* AmountOfHerbs;
+			return Cadantine["BattlemagePotion"]* AmountOfHerbs;
 		}
 	}//Things you can make with Lantadyme
     if (TypeOfHerb === "Lantadyme") {
 		var LantadymeType = document.getElementById("LantadymeType").value;
         if (LantadymeType === "AntifirePotion") {
-			return Lantadyme[
-				"AntifirePotion"
-			]* AmountOfHerbs;
+			return Lantadyme["AntifirePotion"]* AmountOfHerbs;
 		}if (LantadymeType === "MagicPotion") {
-			return Lantadyme[
-				"MagicPotion"
-			]* AmountOfHerbs;
+			return Lantadyme["MagicPotion"]* AmountOfHerbs;
 		}
 	}//Things you can make with DwarfWeed
     if (TypeOfHerb === "DwarfWeed") {
 		var DwarfWeedType = document.getElementById("DwarfWeedType").value;
         if (DwarfWeedType === "RangingPotion") {
-			return DwarfWeed[
-				"RangingPotion"
-			]* AmountOfHerbs;
+			return DwarfWeed["RangingPotion"]* AmountOfHerbs;
 		}
 	}//Things you can make with Torstol
     if (TypeOfHerb === "Torstol") {
 		var TorstolType = document.getElementById("TorstolType").value;
         if (TorstolType === "SuperCombatPotion") {
-			return Torstol[
-				"SuperCombatPotion"
-			]* AmountOfHerbs;
+			return Torstol["SuperCombatPotion"]* AmountOfHerbs;
 		}if (TorstolType === "ZamorakBrew") {
-			return Torstol[
-				"ZamorakBrew"
-			]* AmountOfHerbs;
+			return Torstol["ZamorakBrew"]* AmountOfHerbs;
 		}if (TorstolType === "AntivenomPlus") {
-			return Torstol[
-				"AntivenomPlus"
-			]* AmountOfHerbs;
+			return Torstol["AntivenomPlus"]* AmountOfHerbs;
 		}
 	}else {
 		alert("Unknown type of herb, please try again");
 	}
-}function CalculateGrimyExp(TypeOfHerb,
-AmountOfHerb) {
+}
+
+function CalculateGrimyExp(TypeOfHerb, AmountOfHerb) {
 	var AmountOfHerbs = parseInt(AmountOfHerb);
     //Grimy Guam true
     if (TypeOfHerb === "Guam") {
 		if (document.getElementById("GrimyGuam").checked === true) {
-			return Guam[
-				"Clean"
-			]* AmountOfHerb;
+			return Guam["Clean"] * AmountOfHerb;
 		}else {
 			return 0;
 		}
 	}if (TypeOfHerb === "Marrentill") {
 		if (document.getElementById("GrimyMarrentill").checked === true) {
-			return Marrentill[
-				"Clean"
-			]* AmountOfHerb;
+			return Marrentill["Clean"] * AmountOfHerb;
 		}else {
 			return 0;
 		}
 	}if (TypeOfHerb === "Tarromin") {
 		if (document.getElementById("GrimyTarromin").checked === true) {
-			return Tarromin[
-				"Clean"
-			]* AmountOfHerb;
+			return Tarromin["Clean"] * AmountOfHerb;
 		}else {
 			return 0;
 		}
 	}if (TypeOfHerb === "Harralander") {
 		if (document.getElementById("GrimyHarralander").checked === true) {
-			return Harralander[
-				"Clean"
-			]* AmountOfHerb;
+			return Harralander["Clean"] * AmountOfHerb;
 		}else {
 			return 0;
 		}
 	}if (TypeOfHerb === "Ranarr") {
 		if (document.getElementById("GrimyRanarr").checked === true) {
-			return Ranarr[
-				"Clean"
-			]* AmountOfHerb;
+			return Ranarr["Clean"] * AmountOfHerb;
 		}else {
 			return 0;
 		}
 	}if (TypeOfHerb === "Toadflax") {
 		if (document.getElementById("GrimyToadflax").checked === true) {
-			return Toadflax[
-				"Clean"
-			]* AmountOfHerb;
+			return Toadflax["Clean"] * AmountOfHerb;
 		}else {
 			return 0;
 		}
 	}if (TypeOfHerb === "Irit") {
 		if (document.getElementById("GrimyIrit").checked === true) {
-			return Irit[
-				"Clean"
-			]* AmountOfHerb;
+			return Irit["Clean"] * AmountOfHerb;
 		}else {
 			return 0;
 		}
 	}if (TypeOfHerb === "Avantoe") {
 		if (document.getElementById("GrimyAvantoe").checked === true) {
-			return Avantoe[
-				"Clean"
-			]* AmountOfHerb;
+			return Avantoe["Clean"] * AmountOfHerb;
 		}else {
 			return 0;
 		}
 	}if (TypeOfHerb === "Kwuarm") {
 		if (document.getElementById("GrimyKwuarm").checked === true) {
-			return Kwuarm[
-				"Clean"
-			]* AmountOfHerb;
+			return Kwuarm["Clean"] * AmountOfHerb;
 		}else {
 			return 0;
 		}
 	}if (TypeOfHerb === "Snapdragon") {
 		if (document.getElementById("GrimySnapdragon").checked === true) {
-			return Snapdragon[
-				"Clean"
-			]* AmountOfHerb;
+			return Snapdragon["Clean"] * AmountOfHerb;
 		}else {
 			return 0;
 		}
 	}if (TypeOfHerb === "Cadantine") {
 		if (document.getElementById("GrimyCadantine").checked === true) {
-			return Cadantine[
-				"Clean"
-			]* AmountOfHerb;
+			return Cadantine["Clean"] * AmountOfHerb;
 		}else {
 			return 0;
 		}
 	}if (TypeOfHerb === "Lantadyme") {
 		if (document.getElementById("GrimyLantadyme").checked === true) {
-			return Lantadyme[
-				"Clean"
-			]* AmountOfHerb;
+			return Lantadyme["Clean"] * AmountOfHerb;
 		}else {
 			return 0;
 		}
 	}if (TypeOfHerb === "DwarfWeed") {
 		if (document.getElementById("GrimyDwarfWeed").checked === true) {
-			return DwarfWeed[
-				"Clean"
-			]* AmountOfHerb;
+			return DwarfWeed["Clean"] * AmountOfHerb;
 		}else {
 			return 0;
 		}
 	}if (TypeOfHerb === "Torstol") {
 		if (document.getElementById("GrimyTorstol").checked === true) {
-			return Torstol[
-				"Clean"
-			]* AmountOfHerb;
+			return Torstol["Clean"] * AmountOfHerb;
 		}else {
 			return 0;
 		}
