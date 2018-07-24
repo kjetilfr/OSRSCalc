@@ -36,7 +36,7 @@ function CalculateExp() {
 	
 	var TotalCostOfConstruction = 0;
 	
-
+	var TotalAmountOfLogPlank = 0;
 	
     //Go through the Construcion that have input and calculate xp gained
     var countAmountOfPlankInput = document.getElementsByClassName("Plank").length;
@@ -49,6 +49,14 @@ function CalculateExp() {
 			var TypeOfPlank = document.getElementsByClassName("Plank")[i].id;
 			var AmountOfPlanks = document.getElementsByClassName("Plank")[i].value;
             ExperienceGained += CalculateIndividualConstructionExp(TypeOfPlank, AmountOfPlanks);
+			
+			
+			if (isNaN(AmountOfPlanks)) {
+				TotalAmountOfLogPlank += 0;
+			}
+			else {
+				TotalAmountOfLogPlank += parseInt(AmountOfPlanks);
+			}
 		}
 	}
 	
@@ -63,45 +71,52 @@ function CalculateExp() {
 			var AmountOfLogs = document.getElementsByClassName("Log")[i].value;
             ExperienceGained += CalculateIndividualConstructionExp(TypeOfLog, AmountOfLogs);
 			
-			//Calculate cost to make planks and use butler
-			TotalCostOfConstruction += CostOfConstruction(TypeOfLog, AmountOfLogs, AmountOfPlanks);
-		}
+			//Calculate cost to make planks
+			TotalCostOfConstruction += TotalCostOfPlanks(TypeOfLog, AmountOfLogs);
+			
+			TotalCostOfConstruction += TotalCostOfMakingPlanks(AmountOfLogs);
+	
+			if (isNaN(AmountOfLogs)) {
+				TotalAmountOfLogPlank += 0;
+			}
+			else {
+				TotalAmountOfLogPlank += parseInt(AmountOfLogs);
+			}
+			
+	}
+		
 	}
 
+	TotalCostOfConstruction += TotalCostOfUnnotingPlanks(TotalAmountOfLogPlank);
+	
 	//Output new total experience
     var NewTotalExp = (parseInt(CurrentExp) + parseInt(ExperienceGained));
     document.getElementById("TotalExp").innerHTML = "New total experience: " + NewTotalExp;
+	
 	//Outputs new level and % to new level
     var NewLevel = CalculateNewLevel(CurrentExp,ExperienceGained, "Construction");
     document.getElementById("NewConstructionLevel").innerHTML = "New construction level: " + NewLevel + ", " + PercentToNewLevel(NewTotalExp) + "% to level " + (NewLevel + 1);
+	
 	//Outputs totalcost
 	document.getElementById("CostResponse").innerHTML = "Cost: " + TotalCostOfConstruction + "gp";
 	}
 	
-function CostOfConstruction (TypeOfLog, AmountOfLogs, AmountOfPlanks) {
+function TotalCostOfPlanks (TypeOfLog, AmountOfLogs) {
 	//Checkboxes true of false
 	var CostOfPlanks = document.getElementById("CostOfPlanks").checked;
-	var CostOfButlerMakingPlanks = document.getElementById("CostOfButlerMakingPlanks").checked;
-	var CostOfConstructionPlanks = document.getElementById("CostOfConstructionPlanks").checked;
+
+	var AmountOfLogs = parseInt(AmountOfLogs);
+	if (AmountOfLogs === null || AmountOfLogs === 0 || AmountOfLogs === "" || AmountOfLogs === undefined || isNaN(AmountOfLogs)) {
+			AmountOfLogs = 0;
+		}
 	
 	//Declare variables
 	var CostToMakePlanks = 0;
 	
 	//Adds Amount of logs to Total to find loss from butler
 	var TotalAmountOfLogs = 0;
-	TotalAmountOfLogs += AmountOfLogs;
-	
-	var AmountOfLogs;
-	if (AmountOfLogs === null || AmountOfLogs === 0 || AmountOfLogs === "" || AmountOfLogs === undefined) {
-			AmountOfLogs = 0;
-		}
-	var AmountOfPlanks;
-	if (AmountOfPlanks === null || AmountOfPlanks === 0 || AmountOfPlanks === "" || AmountOfPlanks === undefined) {
-			AmountOfPlanks = 0;
-		}
-	
+
 	var TotalAmountOfLogPlank = 0;
-	TotalAmountOfLogPlank += AmountOfLogs + AmountOfPlanks;
 	
 	//Check if 'CostOfPlanks' is checked
 	if (CostOfPlanks === true) {
@@ -123,23 +138,22 @@ function CostOfConstruction (TypeOfLog, AmountOfLogs, AmountOfPlanks) {
 			CostToMakePlanks += MahoganyPlank["Cost"] * AmountOfLogs;
 		}
 	}
-	//Cost of butler making planks
-	if (CostOfButlerMakingPlanks === true) {
-		//Checks how many planks butler makes at a time
-		var AmountOfMakingPlanksAtATime = document.getElementById("AmountOfMakingPlanks").options[AmountOfMakingPlanks.selectedIndex].value;
-		
-		CostToMakePlanks += Math.ceil(TotalAmountOfLogs / AmountOfMakingPlanksAtATime / 8) * 10000;
-	}
-	
-	//Cost of butler making planks
-	if (CostOfConstructionPlanks === true) {
-		//Checks how many planks butler makes at a time
-		var AmountOfUsingPlanksAtATime = document.getElementById("AmountOfUsingPlanks").options[AmountOfUsingPlanks.selectedIndex].value;
-		
-		CostToMakePlanks += Math.ceil(TotalAmountOfLogPlank / AmountOfUsingPlanksAtATime / 8) * 10000;
-	}
 	
 	return CostToMakePlanks;
+}
+
+function TotalCostOfMakingPlanks(AmountOfLogs) {
+	
+	var AmountOfPlanksAtATime = document.getElementById("AmountOfMakingPlanks").options[AmountOfMakingPlanks.selectedIndex].value;
+	
+	return Math.ceil(AmountOfLogs / AmountOfPlanksAtATime / 8) * 10000;
+}
+
+function TotalCostOfUnnotingPlanks(AmountOfPlankLogs) {
+	
+	var UnnoteAmount = document.getElementById("AmountOfUsingPlanks").options[AmountOfUsingPlanks.selectedIndex].value;
+	
+	return Math.ceil(AmountOfPlankLogs / UnnoteAmount / 8) * 10000;
 }
 	
 function CalculateIndividualConstructionExp(TypeOfPlank, AmountOfPlanks) {
@@ -158,6 +172,6 @@ function CalculateIndividualConstructionExp(TypeOfPlank, AmountOfPlanks) {
 		return MahoganyPlank["Experience"] * AmountOfPlanks;
 	}
 	else {
-		alert("Unknown type of herb, please try again");
+		alert("Unknown type of plank, please try again");
 	}
 }
