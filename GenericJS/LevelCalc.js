@@ -22,6 +22,10 @@ function CalculateNewLevel(CurrentExp, totalExpGained, skill) {
 		var newExp = (parseInt(CurrentExp) + parseInt(totalExpGained));
 	}
 	
+	if (skill === "Cooking") {
+		var newExp = (parseInt(CurrentExp) + parseInt(totalExpGained));
+	}
+	
 	if (isNaN(newExp) === true) {
 		alert("Something went wrong");
 		return 0;
