@@ -341,7 +341,7 @@ function ExpFromHeads () {
 	document.getElementById("TotalExp").innerHTML = NewTotalExp.toLocaleString() + " prayer experience";
 	
 	var NewLevel = CalculateNewLevel(CurrentExp, totalExpGained, "Prayer");
-	document.getElementById("NewPrayerLevel").innerHTML = "Your new prayer level is " + NewLevel + ", " + PercentToNewLevel(NewTotalExp) + "% to level " + (NewLevel + 1);
+	document.getElementById("NewPrayerLevel").innerHTML = "Your new prayer level is <span id='NewLevel'>" + NewLevel + "</span>, " + PercentToNewLevel(NewTotalExp) + "% to level " + (NewLevel + 1);
 	
 	var soulRuneImg = "<img alt='Picture of a soul rune' src='https://vignette.wikia.nocookie.net/2007scape/images/9/9b/Soul_rune.png/revision/latest/scale-to-width-down/20?cb=20151107053235' />";
 	var natureRuneImg = "<img alt='Picture of a nature rune' src='https://vignette.wikia.nocookie.net/2007scape/images/8/88/Nature_rune.png/revision/latest/scale-to-width-down/20?cb=20151107053234' />"

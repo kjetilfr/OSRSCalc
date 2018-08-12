@@ -99,3 +99,7 @@ nav > ul > li > a {
     text-decoration: none;
 	font-weight: bold;
 }
+
+#NewLevel {
+	font-weight: bold;
+}

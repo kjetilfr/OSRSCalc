@@ -95,7 +95,7 @@ function CalculateExp() {
 	
 	//Outputs new level and % to new level
     var NewLevel = CalculateNewLevel(CurrentExp,ExperienceGained, "Construction");
-    document.getElementById("NewConstructionLevel").innerHTML = "New construction level: " + NewLevel + ", " + PercentToNewLevel(NewTotalExp) + "% to level " + (NewLevel + 1);
+    document.getElementById("NewConstructionLevel").innerHTML = "New construction level: <span id='NewLevel'>" + NewLevel + "</span>, " + PercentToNewLevel(NewTotalExp) + "% to level " + (NewLevel + 1);
 	
 	//Outputs totalcost
 	document.getElementById("CostResponse").innerHTML = "Cost: " + TotalCostOfConstruction.toLocaleString() + "gp";

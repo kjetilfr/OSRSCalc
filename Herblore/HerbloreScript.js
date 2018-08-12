@@ -138,7 +138,7 @@ function CalculateExp() {
     var NewTotalExp = (parseInt(CurrentExp) + parseInt(ExperienceGained));
     document.getElementById("TotalExp").innerHTML = "New total experience: " + NewTotalExp.toLocaleString();
     var NewLevel = CalculateNewLevel(CurrentExp,ExperienceGained, "Herblore");
-    document.getElementById("NewHerbloreLevel").innerHTML = "New herblore level: " + NewLevel + ", " + PercentToNewLevel(NewTotalExp) + "% to level " + (NewLevel + 1);
+    document.getElementById("NewHerbloreLevel").innerHTML = "New herblore level: <span id='NewLevel'>" + NewLevel + "</span>, " + PercentToNewLevel(NewTotalExp) + "% to level " + (NewLevel + 1);
 }
 
 function CalculateIndividualSpecialExp(TypeOfSpecial) {

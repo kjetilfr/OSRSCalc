@@ -126,7 +126,7 @@ function CalculateExp() {
     var NewTotalExp = (parseInt(CurrentExp) + parseInt(ExperienceGained));
     document.getElementById("TotalExp").innerHTML = "New total experience: " + NewTotalExp.toLocaleString();
     var NewLevel = CalculateNewLevel(CurrentExp,ExperienceGained, "Crafting");
-    document.getElementById("NewCraftingLevel").innerHTML = "New crafting level: " + NewLevel + ", " + PercentToNewLevel(NewTotalExp) + "% to level " + (NewLevel + 1);
+    document.getElementById("NewCraftingLevel").innerHTML = "New crafting level: <span id='NewLevel'>" + NewLevel + "</span>, " + PercentToNewLevel(NewTotalExp) + "% to level " + (NewLevel + 1);
 }
 
 function SeaweedCalculator() {

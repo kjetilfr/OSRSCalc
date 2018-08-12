@@ -136,3 +136,7 @@ nav > ul > li > a:hover {
 #CurrentExp {
 	width: 120px;
 }
+
+#NewLevel {
+	font-weight: bold;
+}

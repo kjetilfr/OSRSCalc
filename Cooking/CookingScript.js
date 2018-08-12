@@ -104,7 +104,7 @@ function CalculateExp() {
     var NewTotalExp = (parseInt(CurrentExp) + parseInt(ExperienceGained));
     document.getElementById("TotalExp").innerHTML = "New total experience: " + NewTotalExp.toLocaleString();
     var NewLevel = CalculateNewLevel(CurrentExp,ExperienceGained, "Cooking");
-    document.getElementById("NewCookingLevel").innerHTML = "New cooking level: " + NewLevel + ", " + PercentToNewLevel(NewTotalExp) + "% to level " + (NewLevel + 1);
+    document.getElementById("NewCookingLevel").innerHTML = "New cooking level: <span id='NewLevel'>" + NewLevel + "</span>, " + PercentToNewLevel(NewTotalExp) + "% to level " + (NewLevel + 1);
 }
 
 function CalculateIndividualFoodExp(TypeOfFood, AmountOfFood) {
