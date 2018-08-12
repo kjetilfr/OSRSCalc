@@ -338,7 +338,7 @@ function ExpFromHeads () {
 		totalBloodRunes += EnsouledDragon.runes.Blood * DragonHeadInput.value;
 	}
 	var NewTotalExp = (parseInt(totalExpGained) + parseInt(CurrentExp) + Bones());
-	document.getElementById("TotalExp").innerHTML = NewTotalExp + " prayer experience";
+	document.getElementById("TotalExp").innerHTML = NewTotalExp.toLocaleString() + " prayer experience";
 	
 	var NewLevel = CalculateNewLevel(CurrentExp, totalExpGained, "Prayer");
 	document.getElementById("NewPrayerLevel").innerHTML = "Your new prayer level is " + NewLevel + ", " + PercentToNewLevel(NewTotalExp) + "% to level " + (NewLevel + 1);

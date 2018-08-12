@@ -96,13 +96,13 @@ function CalculateExp() {
 			ExperienceGained += 0;
             continue;
 		}else {
-			//Calculate potion experience
+			//Calculate food experience
             ExperienceGained += CalculateIndividualFoodExp(document.getElementsByClassName("Food")[i].id, document.getElementsByClassName("Food")[i].value);
 		}
 	}
 	//Output stuff
     var NewTotalExp = (parseInt(CurrentExp) + parseInt(ExperienceGained));
-    document.getElementById("TotalExp").innerHTML = "New total experience: " + NewTotalExp;
+    document.getElementById("TotalExp").innerHTML = "New total experience: " + NewTotalExp.toLocaleString();
     var NewLevel = CalculateNewLevel(CurrentExp,ExperienceGained, "Cooking");
     document.getElementById("NewCookingLevel").innerHTML = "New cooking level: " + NewLevel + ", " + PercentToNewLevel(NewTotalExp) + "% to level " + (NewLevel + 1);
 }

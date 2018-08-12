@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>OSRS Calc</title>
+		<link rel="icon" href="../favicon.png" sizes="16x16" type="image/png">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" href="MaffsStyle.css" />
+		<script src="../GenericJS/LevelCalc.js"></script>
+		<script src="CraftingScript.js"></script>
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+    </head>
+    <body>
+		<nav>
+			<ul>
+				<li><a href="/OSRSCalc/index.html">Home</a></li>
+				<li><a href="/OSRSCalc/news.html">News (Coming soon)</a></li>
+				<li><a href="/OSRSCalc/contact.html">Contact (Coming soon)</a></li>
+			</ul>
+		</nav>
+		<div id="content">
+			<h2>Welcome to the crafting calculator</h2>
+			<p>Current <img alt="Crafting icon" src="https://vignette.wikia.nocookie.net/2007scape/images/c/cf/Crafting_icon.png/revision/latest?cb=20180424010841" /> experience:</p>
+			<input type="number" id="CurrentExp" placeholder="0 - 200'000'000"><br />
+			<table>
+				<tr>
+					<th>Dragonhide</th>
+					<th>Amount</th>
+				</tr>
+				<tr>
+					<td>
+						<p><img alt="Green d'hide vamb" src="https://vignette.wikia.nocookie.net/2007scape/images/5/59/Green_dragon_leather.png/revision/latest?cb=20130506055858" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supplies" type="number" id="Greendhide" placeholder="Number of Green leather"/>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<p><img alt="Blue d'hide vamb" src="https://vignette.wikia.nocookie.net/2007scape/images/9/92/Blue_dragon_leather.png/revision/latest?cb=20130506055925" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supplies" type="number" id="Bluedhide" placeholder="Number of Blue leather"/>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<p><img alt="Green d'hide vamb" src="https://vignette.wikia.nocookie.net/2007scape/images/1/1b/Red_dragon_leather.png/revision/latest?cb=20130506060022" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supplies" type="number" id="Reddhide" placeholder="Number of Red leather"/>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<p><img alt="Green d'hide vamb" src="https://vignette.wikia.nocookie.net/2007scape/images/b/b6/Black_dragon_leather.png/revision/latest?cb=20130506060107" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supplies" type="number" id="Blackdhide" placeholder="Number of Black leather"/>
+					</td>
+				</tr>
+				
+				<tr>
+					<th>Glassblowing</th>
+					<th>Amount</th>
+					<th>Make with Molten glass</th>
+				</tr>
+				
+				<tr>
+					<td>
+						<p><img alt="Glassblowing" src="https://vignette.wikia.nocookie.net/2007scape/images/8/84/Molten_glass.png/revision/latest?cb=20130930211127" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supplies" type="number" id="Glassblowing" placeholder="Number of Molten glass"/>
+					</td>
+					
+					<td class="TypeOfGlassblowing">
+						<select id="GlassblowingType">
+							<option value="BeerGlass">Beer glass</option>
+							<option value="CandleLantern">Candle lantern</option>
+							<option value="OilLamp">Oil lamp</option>
+							<option value="Vial">Vial</option>
+							<option value="Fishbowl">Fishbowl</option>
+							<option value="UnpoweredOrb">Unpowered orb</option>
+							<option value="LanternLens">Lantern lens</option>
+							<option value="LightOrb">Light orb</option>
+						</select>
+					</td>
+					
+				</tr>
+				
+				<tr>
+					<td>
+						<p><img alt="Green d'hide vamb" src="https://vignette.wikia.nocookie.net/2007scape/images/8/84/Molten_glass.png/revision/latest?cb=20130930211127" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supplies" type="number" id="Glassblowing" placeholder="Number of Molten glass"/>
+					</td>
+					
+					<td class="TypeOfGlassblowing">
+						<select id="GlassblowingType">
+							<option value="BeerGlass">Beer glass</option>
+							<option value="CandleLantern">Candle lantern</option>
+							<option value="OilLamp">Oil lamp</option>
+							<option value="Vial">Vial</option>
+							<option value="Fishbowl">Fishbowl</option>
+							<option value="UnpoweredOrb">Unpowered orb</option>
+							<option value="LanternLens">Lantern lens</option>
+							<option value="LightOrb">Light orb</option>
+						</select>
+					</td>
+					
+				</tr>
+				
+				<tr>
+					<th>Cutting gems</th>
+					<th>Amount</th>
+				</tr>
+				
+				<tr>
+					<td>
+						<p><img alt="Opal" src="https://vignette.wikia.nocookie.net/2007scape/images/d/dc/Uncut_opal.png/revision/latest?cb=20141007030005" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supplies" type="number" id="Opal" placeholder="Number of Opal"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p><img alt="Jade" src="https://vignette.wikia.nocookie.net/2007scape/images/b/b2/Uncut_jade.png/revision/latest?cb=20141007030035" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supplies" type="number" id="Jade" placeholder="Number of Jade"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p><img alt="Topaz" src="https://vignette.wikia.nocookie.net/2007scape/images/b/b2/Uncut_red_topaz.png/revision/latest?cb=20141007030106" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supplies" type="number" id="Topaz" placeholder="Number of Topaz"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p><img alt="Sapphire" src="https://vignette.wikia.nocookie.net/2007scape/images/7/77/Uncut_sapphire.png/revision/latest?cb=20141007025813" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supplies" type="number" id="Sapphire" placeholder="Number of Sapphire"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p><img alt="Emerald" src="https://vignette.wikia.nocookie.net/2007scape/images/c/c4/Uncut_emerald.png/revision/latest?cb=20141007025745" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supplies" type="number" id="Emerald" placeholder="Number of Emerald"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p><img alt="Ruby" src="https://vignette.wikia.nocookie.net/2007scape/images/e/ec/Uncut_ruby.png/revision/latest?cb=20141007025838" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supplies" type="number" id="Ruby" placeholder="Number of Ruby"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p><img alt="Diamond" src="https://vignette.wikia.nocookie.net/2007scape/images/2/22/Uncut_diamond.png/revision/latest?cb=20141007025931" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supplies" type="number" id="Diamond" placeholder="Number of Diamond"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p><img alt="Dragonstone" src="https://vignette.wikia.nocookie.net/2007scape/images/2/2b/Uncut_dragonstone.png/revision/latest?cb=20130601155740" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supplies" type="number" id="Dragonstone" placeholder="Number of Dragonstone"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p><img alt="Onyx" src="https://vignette.wikia.nocookie.net/2007scape/images/f/f7/Uncut_onyx.png/revision/latest?cb=20131130204902" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supplies" type="number" id="Onyx" placeholder="Number of Onyx"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p><img alt="Zenyte" src="https://vignette.wikia.nocookie.net/2007scape/images/6/67/Uncut_zenyte.png/revision/latest?cb=20160506110857" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supplies" type="number" id="Zenyte" placeholder="Number of Zenyte"/>
+					</td>
+				</tr>
+				
+				<tr>
+					<th>Silver jewellery</th>
+					<th>Amount</th>
+				</tr>
+				
+				<tr>
+					<td>
+						<p><img alt="Opal" src="https://vignette.wikia.nocookie.net/2007scape/images/3/3c/Opal.png/revision/latest?cb=20141007030153" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supplies" type="number" id="OpalJewellery" placeholder="Number of Opal"/>
+					</td>
+					<td class="TypeOfSilverJewellery">
+						<select id="OpalType">
+							<option value="OpalRing">Opal ring</option>
+							<option value="OpalNecklace">Opal necklace</option>
+							<option value="OpalBracelet">Opal bracelet</option>
+							<option value="OpalAmulet">Opal amulet</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p><img alt="Jade" src="https://vignette.wikia.nocookie.net/2007scape/images/7/7e/Jade.png/revision/latest?cb=20141007030226" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supplies" type="number" id="JadeJewellery" placeholder="Number of Jade"/>
+					</td>
+					<td class="TypeOfSilverJewellery">
+						<select id="JadeType">
+							<option value="JadeRing">Jade ring</option>
+							<option value="JadeNecklace">Jade necklace</option>
+							<option value="JadeBracelet">Jade bracelet</option>
+							<option value="JadeAmulet">Jade amulet</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p><img alt="Topaz" src="https://vignette.wikia.nocookie.net/2007scape/images/f/f1/Red_topaz.png/revision/latest?cb=20141007030300" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supplies" type="number" id="TopazJewellery" placeholder="Number of Topaz"/>
+					</td>
+					<td class="TypeOfSilverJewellery">
+						<select id="TopazType">
+							<option value="TopazRing">Topaz ring</option>
+							<option value="TopazNecklace">Topaz necklace</option>
+							<option value="TopazBracelet">Topaz bracelet</option>
+							<option value="TopazAmulet">Topaz amulet</option>
+						</select>
+					</td>
+				</tr>
+				
+				<tr>
+					<th>Gold jewellery</th>
+					<th>Amount</th>
+				</tr>
+				
+				<tr>
+					<td>
+						<p><img alt="Gold bar" src="https://vignette.wikia.nocookie.net/2007scape/images/0/07/Gold_bar.png/revision/latest?cb=20130821163854" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supplies" type="number" id="GoldJewellery" placeholder="Number of Gold"/>
+					</td>
+					<td class="TypeOfGoldJewellery">
+						<select id="GoldType">
+							<option value="GoldRing">Gold ring</option>
+							<option value="GoldNecklace">Gold necklace</option>
+							<option value="GoldBracelet">Gold bracelet</option>
+							<option value="GoldAmulet">Gold amulet</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p><img alt="Sapphire" src="https://vignette.wikia.nocookie.net/2007scape/images/f/f7/Sapphire.png/revision/latest?cb=20131212090322" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supplies" type="number" id="SapphireJewellery" placeholder="Number of Sapphire"/>
+					</td>
+					<td class="TypeOfGoldJewellery">
+						<select id="SapphireType">
+							<option value="SapphireRing">Sapphire ring</option>
+							<option value="SapphireNecklace">Sapphire necklace</option>
+							<option value="SapphireBracelet">Sapphire bracelet</option>
+							<option value="SapphireAmulet">Sapphire amulet</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p><img alt="Emerald" src="https://vignette.wikia.nocookie.net/2007scape/images/6/6a/Emerald.png/revision/latest?cb=20140309052221" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supplies" type="number" id="EmeraldJewellery" placeholder="Number of Emerald"/>
+					</td>
+					<td class="TypeOfGoldJewellery">
+						<select id="EmeraldType">
+							<option value="EmeraldRing">Emerald ring</option>
+							<option value="EmeraldNecklace">Emerald necklace</option>
+							<option value="EmeraldBracelet">Emerald bracelet</option>
+							<option value="EmeraldAmulet">Emerald amulet</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p><img alt="Ruby" src="https://vignette.wikia.nocookie.net/2007scape/images/a/a9/Ruby.png/revision/latest?cb=20141007030324" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supplies" type="number" id="RubyJewellery" placeholder="Number of Ruby"/>
+					</td>
+					<td class="TypeOfGoldJewellery">
+						<select id="RubyType">
+							<option value="RubyRing">Ruby ring</option>
+							<option value="RubyNecklace">Ruby necklace</option>
+							<option value="RubyBracelet">Ruby bracelet</option>
+							<option value="RubyAmulet">Ruby amulet</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p><img alt="Diamond" src="https://vignette.wikia.nocookie.net/2007scape/images/e/ea/Diamond.png/revision/latest?cb=20140427180651" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supplies" type="number" id="DiamondJewellery" placeholder="Number of Diamond"/>
+					</td>
+					<td class="TypeOfGoldJewellery">
+						<select id="DiamondType">
+							<option value="DiamondRing">Diamond ring</option>
+							<option value="DiamondNecklace">Diamond necklace</option>
+							<option value="DiamondBracelet">Diamond bracelet</option>
+							<option value="DiamondAmulet">Diamond amulet</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p><img alt="Dragonstone" src="https://vignette.wikia.nocookie.net/2007scape/images/2/25/Dragonstone.png/revision/latest?cb=20140804055326" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supplies" type="number" id="DragonstoneJewellery" placeholder="Number of Dragonstone"/>
+					</td>
+					<td class="TypeOfGoldJewellery">
+						<select id="DragonstoneType">
+							<option value="DragonstoneRing">Dragonstone ring</option>
+							<option value="DragonstoneNecklace">Dragonstone necklace</option>
+							<option value="DragonstoneBracelet">Dragonstone bracelet</option>
+							<option value="DragonstoneAmulet">Dragonstone amulet</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p><img alt="Onyx" src="https://vignette.wikia.nocookie.net/2007scape/images/f/fb/Onyx.png/revision/latest?cb=20140804054814" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supplies" type="number" id="OnyxJewellery" placeholder="Number of Onyx"/>
+					</td>
+					<td class="TypeOfGoldJewellery">
+						<select id="OnyxType">
+							<option value="OnyxRing">Onyx ring</option>
+							<option value="OnyxNecklace">Onyx necklace</option>
+							<option value="OnyxBracelet">Onyx bracelet</option>
+							<option value="OnyxAmulet">Onyx amulet</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p><img alt="Zenyte" src="https://vignette.wikia.nocookie.net/2007scape/images/4/45/Zenyte.png/revision/latest?cb=20160506110859" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supplies" type="number" id="ZenyteJewellery" placeholder="Number of Zenyte"/>
+					</td>
+					<td class="TypeOfGoldJewellery">
+						<select id="ZenyteType">
+							<option value="ZenyteRing">Zenyte ring</option>
+							<option value="ZenyteNecklace">Zenyte necklace</option>
+							<option value="ZenyteBracelet">Zenyte bracelet</option>
+							<option value="ZenyteAmulet">Zenyte amulet</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p><img alt="Slayer ring" src="https://vignette.wikia.nocookie.net/2007scape/images/2/24/Enchanted_gem.png/revision/latest?cb=20130513072905" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supplies" type="number" id="SlayerRing" placeholder="Number of Slayer Ring"/>
+					</td>
+				</tr>
+				
+				<tr>
+					<th>Weaponry</th>
+					<th>Amount</th>
+				</tr>
+				
+				<tr>
+					<td>
+						<p><img alt="Water battlestaff" src="https://vignette.wikia.nocookie.net/2007scape/images/c/c5/Water_orb.png/revision/latest?cb=20140123175928" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supplies" type="number" id="WaterBattlestaff" placeholder="Number of Water orbs"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p><img alt="Earth battlestaff" src="https://vignette.wikia.nocookie.net/2007scape/images/e/e2/Earth_orb.png/revision/latest?cb=20140528104956" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supplies" type="number" id="EarthBattlestaff" placeholder="Number of Earth orbs"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p><img alt="Fire battlestaff" src="https://vignette.wikia.nocookie.net/2007scape/images/0/03/Fire_orb.png/revision/latest?cb=20140309022210" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supplies" type="number" id="FireBattlestaff" placeholder="Number of Fire orbs"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<p><img alt="Air battlestaff" src="https://vignette.wikia.nocookie.net/2007scape/images/a/ad/Air_orb.png/revision/latest?cb=20140622060937" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supplies" type="number" id="AirBattlestaff" placeholder="Number of Air orbs"/>
+					</td>
+				</tr>
+
+			</table>
+			
+			<input type="button" id="CalculateExp" value="Calculate" />
+		</div>
+		
+		<div id="response">
+			<div id="TotalExp"></div>
+			<div id="NewCraftingLevel"></div>
+			<div id="PercentToNewLevel"></div>
+		</div>
+		
+    </body>
+</html>

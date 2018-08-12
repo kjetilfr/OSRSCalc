@@ -91,14 +91,14 @@ function CalculateExp() {
 	
 	//Output new total experience
     var NewTotalExp = (parseInt(CurrentExp) + parseInt(ExperienceGained));
-    document.getElementById("TotalExp").innerHTML = "New total experience: " + NewTotalExp;
+    document.getElementById("TotalExp").innerHTML = "New total experience: " + NewTotalExp.toLocaleString();
 	
 	//Outputs new level and % to new level
     var NewLevel = CalculateNewLevel(CurrentExp,ExperienceGained, "Construction");
     document.getElementById("NewConstructionLevel").innerHTML = "New construction level: " + NewLevel + ", " + PercentToNewLevel(NewTotalExp) + "% to level " + (NewLevel + 1);
 	
 	//Outputs totalcost
-	document.getElementById("CostResponse").innerHTML = "Cost: " + TotalCostOfConstruction + "gp";
+	document.getElementById("CostResponse").innerHTML = "Cost: " + TotalCostOfConstruction.toLocaleString() + "gp";
 	}
 	
 function TotalCostOfPlanks (TypeOfLog, AmountOfLogs) {

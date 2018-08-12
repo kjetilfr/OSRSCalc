@@ -136,7 +136,7 @@ function CalculateExp() {
 		}
 	}//Output stuff
     var NewTotalExp = (parseInt(CurrentExp) + parseInt(ExperienceGained));
-    document.getElementById("TotalExp").innerHTML = "New total experience: " + NewTotalExp;
+    document.getElementById("TotalExp").innerHTML = "New total experience: " + NewTotalExp.toLocaleString();
     var NewLevel = CalculateNewLevel(CurrentExp,ExperienceGained, "Herblore");
     document.getElementById("NewHerbloreLevel").innerHTML = "New herblore level: " + NewLevel + ", " + PercentToNewLevel(NewTotalExp) + "% to level " + (NewLevel + 1);
 }
