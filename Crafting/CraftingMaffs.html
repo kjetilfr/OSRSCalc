@@ -22,7 +22,36 @@
 		<div id="content">
 			<h2>Welcome to the crafting calculator</h2>
 			<p>Current <img alt="Crafting icon" src="https://vignette.wikia.nocookie.net/2007scape/images/c/cf/Crafting_icon.png/revision/latest?cb=20180424010841" /> experience:</p>
-			<input type="number" id="CurrentExp" placeholder="0 - 200'000'000"><br />
+			<input type="number" id="CurrentExp" placeholder="0 - 200'000'000"><input type="number" id="SeaweedExp" placeholder="Seaweed xp" disabled><br />
+			
+			<div id="seaweedDiv">
+			
+				<table>
+					<tr>
+						<td>
+							<p><img alt="Giant seaweed" src="https://vignette.wikia.nocookie.net/2007scape/images/6/64/Giant_seaweed.png/revision/latest?cb=20170907161857" /></p>
+						</td>
+						<td>
+							<input type="number" id="GiantSeaweed" placeholder="Number of Giant sweaweed"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p><img alt="Seaweed" src="https://vignette.wikia.nocookie.net/2007scape/images/1/13/Seaweed.png/revision/latest?cb=20130625231022" /></p>
+						</td>
+						<td>
+							<input type="number" id="Seaweed" placeholder="Number of Sweaweed"/>
+						</td>
+					</tr>
+				</table>
+				<input type="button" id="CalculateSeaweed" value="Calculate Seaweed" />
+				<div id="Seaweedresponse">
+					<div id="ExperienceFromSuperglassMake"></div>
+					<div id="NumberOfMoltenglass"></div>
+					<div id="Information"></div>
+				</div>
+			</div>
+			
 			<table>
 				<tr>
 					<th>Dragonhide</th>
@@ -205,6 +234,7 @@
 				<tr>
 					<th>Silver jewellery</th>
 					<th>Amount</th>
+					<th>Type of jewellery</th>
 				</tr>
 				
 				<tr>
@@ -259,6 +289,7 @@
 				<tr>
 					<th>Gold jewellery</th>
 					<th>Amount</th>
+					<th>Type of jewellery</th>
 				</tr>
 				
 				<tr>
@@ -435,7 +466,7 @@
 						<input class="Supplies" type="number" id="AirBattlestaff" placeholder="Number of Air orbs"/>
 					</td>
 				</tr>
-
+				
 			</table>
 			
 			<input type="button" id="CalculateExp" value="Calculate" />

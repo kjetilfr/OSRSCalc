@@ -71,6 +71,19 @@ h2 {
 	margin: 2px auto;
 }
 
+#Seaweedresponse {
+	background: #76B3FA;
+	/*font-weight: bold;*/
+	border-radius: 20px;
+	padding: 10px 25px;
+	/*color: #fff;*/
+	text-decoration: none;
+	margin: 0 5px;
+	border: 1px solid blue;
+	
+	margin: 2px auto;
+}
+
 nav {
     background-color: #333;
     margin: 0;
@@ -101,5 +114,25 @@ nav > ul > li > a {
 }
 
 nav > ul > li > a:hover {
-    background-color:#888;
+    background-color: #888;
+}
+
+#seaweedDiv {
+	border: 1px solid blue;
+	border-radius: 10px;
+	padding: 1px 2px;
+	
+	text-align:center;
+}
+
+#Information {
+	font-style: italic;
+}
+
+#SeaweedExp {
+	width: 90px;
+}
+
+#CurrentExp {
+	width: 120px;
 }

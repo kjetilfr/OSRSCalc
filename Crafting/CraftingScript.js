@@ -4,10 +4,14 @@ function run() {
 	document.getElementById("CalculateExp").onclick = function() {
 		CalculateExp()
 	};
+	document.getElementById("CalculateSeaweed").onclick = function() {
+		SeaweedCalculator()
+	};
 }
 
-//Crafting categories
 var CurrentExp = 0;
+
+//Crafting categories
 var Dhide = {
 	Green: 62,
 	Blue: 70,
@@ -92,11 +96,21 @@ var Battlestaves = {
 };
 
 function CalculateExp() {
-	//Check currentExp value (set to 0 if empty(
-    CurrentExp = document.getElementById("CurrentExp").value;
-    if (CurrentExp === null || CurrentExp === 0 || CurrentExp === "") {
-		CurrentExp = 0;
-	}var ExperienceGained = 0;
+	//Check Input Exp value (set to 0 if empty)
+    InputExp = document.getElementById("CurrentExp").value;
+    if (InputExp === null || InputExp === 0 || InputExp === "") {
+		InputExp = 0;
+	}
+	
+	var SeaweedExp = document.getElementById("SeaweedExp").value;
+	if (SeaweedExp === null || SeaweedExp === 0 || SeaweedExp === "") {
+		SeaweedExp = 0;
+	}
+
+	CurrentExp = parseInt(InputExp) + parseInt(SeaweedExp);
+	
+	var ExperienceGained = 0;
+	
     //Go through the Supplies and calculate xp gained
     var countAmountOfSupplies = document.getElementsByClassName("Supplies").length;
     for (i = 0; i < countAmountOfSupplies ; i++) {
@@ -115,7 +129,41 @@ function CalculateExp() {
     document.getElementById("NewCraftingLevel").innerHTML = "New crafting level: " + NewLevel + ", " + PercentToNewLevel(NewTotalExp) + "% to level " + (NewLevel + 1);
 }
 
+function SeaweedCalculator() {
+	var AmountOfSeaweed = document.getElementById("Seaweed").value;
+	var AmountOfGiantSweaweed = document.getElementById("GiantSeaweed").value;
+	
+	if (AmountOfSeaweed === null || AmountOfSeaweed === 0 || AmountOfSeaweed === "") {
+		AmountOfSeaweed = 0;
+	}
+	if (AmountOfGiantSweaweed === null || AmountOfGiantSweaweed === 0 || AmountOfGiantSweaweed === "") {
+		AmountOfGiantSweaweed = 0;
+	}
+	
+	var MoltenGlass = 0;
+	
+	//Making normal seaweed into molten glass
+	MoltenGlass += AmountOfSeaweed * 1.3;
+	
+	//Making giant seaweed into molten glass
+	MoltenGlass += AmountOfGiantSweaweed * 8.75;
+	
+	//Experience Gained
+	var ExperienceGained = (AmountOfSeaweed * 10) + (AmountOfGiantSweaweed * 6 * 10);
+	
+	//Output
+	document.getElementById("ExperienceFromSuperglassMake").innerHTML = "Experience from Superglass make spell: " + ExperienceGained.toLocaleString();
+	document.getElementById("NumberOfMoltenglass").innerHTML = "Molten glass made: " + MoltenGlass;
+	document.getElementById("Information").innerHTML = "Based on average, might get lucky or unlucky. Using the superglass make spell!";
+	
+	//Add seaweed xp to total xp
+	document.getElementById("SeaweedExp").value = ExperienceGained;
+}
+
+
+
 function CalculateIndividualSuppliesExp(TypeOfSupply, AmountOfSupplies) {
+	alert(TypeOfSupply + " " + AmountOfSupplies);
 	var AmountOfSupplies = parseInt(AmountOfSupplies);
     //Things you can make with Dhide
     if (TypeOfSupply === "Greendhide") {
