@@ -22,7 +22,7 @@ var Tarromin = {
 	Clean: 5,
 	StrengthPotion: 50,
 	Serum207: 50,
-	TarrominTar: 55
+	TarrominTars: 55
 };
 var Harralander = {
 	Clean: 6.3,
@@ -30,7 +30,7 @@ var Harralander = {
 	CombatPotion: 84,
 	RestorePotion: 62.5,
 	CompostPotion: 60,
-	HarralanderTar: 72.5
+	HarralanderTars: 72.5
 };
 var Ranarr = {
 	Clean: 7.5,
