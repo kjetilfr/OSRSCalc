@@ -93,7 +93,24 @@ function CalculateIndividualSupplyExp(SupplyID, SupplyAmount) {
 	}
 	
 	//Making Bars into Items
-	
+	if (SupplyID === "BronzeBar") {
+		return Bar["Bronze"] * SupplyAmount;
+	}
+	if (SupplyID === "IronBar") {
+		return Bar["Iron"] * SupplyAmount;
+	}
+	if (SupplyID === "SteelBar") {
+		return Bar["Steel"] * SupplyAmount;
+	}
+	if (SupplyID === "MithrilBar") {
+		return Bar["Mithril"] * SupplyAmount;
+	}
+	if (SupplyID === "AdamantBar") {
+		return Bar["Adamant"] * SupplyAmount;
+	}
+	if (SupplyID === "RuniteBar") {
+		return Bar["Runite"] * SupplyAmount;
+	}
 	else {
 		alert("Unknown type of ore/bar, please try again");
 	}
