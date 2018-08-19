@@ -31,12 +31,10 @@ function CalculateNewLevel(CurrentExp, totalExpGained, skill) {
 	}
 	
 	if (skill === "Smithing") {
-		alert("Smithing " + CurrentExp + totalExpGained);
 		var newExp = (parseInt(CurrentExp) + parseInt(totalExpGained));
 	}
 	
 	if (isNaN(newExp) === true) {
-		alert(newExp);
 		alert("Something went wrong");
 		return 0;
 		}if (newExp < experienceArray[1]) {
