@@ -6,19 +6,30 @@ function run() {
 	};
 }
 
-//Uncooked food
+//Ores
 var CurrentExp = 0;
-var Meat = {
-	Meat: 30,
-	Chicken: 30,
-	Rabbit: 30,
-	RoastBirdMeat: 60,
-	RoastRabbit: 70,
-	CrabMeat: 100
+var Ore = {
+	Bronze: 6.25,
+	Blurite: 8,
+	Iron: 12.5,
+	Silver: 13.67,
+	Steel: 17.5,
+	Gold: 22.5,
+	GoldGloves: 56.2,
+	Mithril: 30,
+	Adamant: 37.5,
+	Runite: 50
 };
 
-var Fish = {
-	Shrimps: 30
+//Bars
+var Bar = {
+	Bronze: 12.5,
+	Blurite: 17,
+	Iron: 25,
+	Steel: 37.5,
+	Mithril: 50,
+	Adamant: 62.5,
+	Runite: 75
  };
 
 function CalculateExp() {
@@ -27,33 +38,61 @@ function CalculateExp() {
     if (CurrentExp === null || CurrentExp === 0 || CurrentExp === "") {
 		CurrentExp = 0;
 	}var ExperienceGained = 0;
-    //Go through the FOOD and calculate xp gained
-    var countAmountOfFood = document.getElementsByClassName("Food").length;
-    for (i = 0; i < countAmountOfFood ; i++) {
-		if (document.getElementsByClassName("Food")[i].value === null || document.getElementsByClassName("Food")[i].value === 0 || document.getElementsByClassName("Food")[i].value === "") {
+    //Go through the Supplies and calculate xp gained
+    var countAmountOfSupplies = document.getElementsByClassName("Supply").length;
+    for (i = 0; i < countAmountOfSupplies ; i++) {
+		if (document.getElementsByClassName("Supply")[i].value === null || document.getElementsByClassName("Supply")[i].value === 0 || document.getElementsByClassName("Supply")[i].value === "") {
 			ExperienceGained += 0;
             continue;
 		}else {
 			//Calculate food experience
-            ExperienceGained += CalculateIndividualFoodExp(document.getElementsByClassName("Food")[i].id, document.getElementsByClassName("Food")[i].value);
+            ExperienceGained += CalculateIndividualSupplyExp(document.getElementsByClassName("Supply")[i].id, document.getElementsByClassName("Supply")[i].value);
 		}
 	}
 	//Output stuff
     var NewTotalExp = (parseInt(CurrentExp) + parseInt(ExperienceGained));
     document.getElementById("TotalExp").innerHTML = "New total experience: " + NewTotalExp.toLocaleString();
-    var NewLevel = CalculateNewLevel(CurrentExp,ExperienceGained, "Cooking");
-    document.getElementById("NewCookingLevel").innerHTML = "New cooking level: <span id='NewLevel'>" + NewLevel + "</span>, " + PercentToNewLevel(NewTotalExp) + "% to level " + (NewLevel + 1);
+    var NewLevel = CalculateNewLevel(CurrentExp,ExperienceGained, "Smithing");
+    document.getElementById("NewSmithingLevel").innerHTML = "New smithing level: <span id='NewLevel'>" + NewLevel + "</span>, " + PercentToNewLevel(NewTotalExp) + "% to level " + (NewLevel + 1);
 }
 
-function CalculateIndividualFoodExp(TypeOfFood, AmountOfFood) {
-	var AmountOfFood = parseInt(AmountOfFood);
-    //Things you can make with Meat
-    if (TypeOfFood === "Meat") {
-		return Meat["Meat"] * AmountOfFood;
+function CalculateIndividualSupplyExp(SupplyID, SupplyAmount) {
+	var AmountOfSupplies = parseInt(SupplyAmount);
+	//Making Ores into Bars
+	if (SupplyID === "BronzeOre") {
+		return Ore["Bronze"] * SupplyAmount;
 	}
-	if (TypeOfFood === "Chicken") {
-		return Meat["Chicken"] * AmountOfFood;
+	if (SupplyID === "BluriteOre") {
+		return Ore["Blurite"] * SupplyAmount;
 	}
+	if (SupplyID === "IronOre") {
+		return Ore["Iron"] * SupplyAmount;
+	}
+	if (SupplyID === "SilverOre") {
+		return Ore["Silver"] * SupplyAmount;
+	}
+	if (SupplyID === "SteelOre") {
+		return Ore["Steel"] * SupplyAmount;
+	}
+	if (SupplyID === "GoldOre") {
+		if (document.getElementById("GoldGloves").checked === false) {
+			return Ore["Gold"] * SupplyAmount;	
+		}
+		if (document.getElementById("GoldGloves").checked === true) {
+			return Ore["GoldGloves"] * SupplyAmount;	
+		}
+	}
+	if (SupplyID === "MithrilOre") {
+		return Ore["Mithril"] * SupplyAmount;
+	}
+	if (SupplyID === "AdamantOre") {
+		return Ore["Adamant"] * SupplyAmount;
+	}
+	if (SupplyID === "RuniteOre") {
+		return Ore["Runite"] * SupplyAmount;
+	}
+	
+	//Making Bars into Items
 	
 	else {
 		alert("Unknown type of ore/bar, please try again");
