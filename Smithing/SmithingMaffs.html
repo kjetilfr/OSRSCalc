@@ -1,3 +1,137 @@
-<html>
-test
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>OSRS Calc</title>
+		<link rel="icon" href="../favicon.png" sizes="16x16" type="image/png">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="stylesheet" href="MaffsStyle.css" />
+		<script src="../GenericJS/LevelCalc.js"></script>
+		<script src="SmithingScript.js"></script>
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+    </head>
+    <body>
+		<nav>
+			<ul>
+				<li><a href="/OSRSCalc/index.html">Home</a></li>
+				<li><a href="/OSRSCalc/news.html">News (Coming soon)</a></li>
+				<li><a href="/OSRSCalc/contact.html">Contact (Coming soon)</a></li>
+			</ul>
+		</nav>
+		<div id="content">
+			<h2>Welcome to the smithing calculator</h2>
+			<p>Current <img alt="Smithing icon" src="https://vignette.wikia.nocookie.net/2007scape/images/d/dc/Cooking_icon.png/revision/latest?cb=20180424010923" /> experience:</p>
+			<input type="number" id="CurrentExp" placeholder="0 - 200'000'000"><br />
+			<table>
+				<tr>
+					<th>Ores</th>
+					<th>Amount</th>
+          <th>Extra</th>
+				</tr>
+				<tr>
+					<td>
+					<p><img alt="Tin ore" src="" /><img alt="Copper ore" src="" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supply" type="number" id="BronzeOre" placeholder="Number of Tin & Copper ores"/>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<p><img alt="Blurite ore" src="" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supply" type="number" id="BluriteOre" placeholder="Number of Blurite ores"/>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<p><img alt="Iron ore" src="" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supply" type="number" id="IronOre" placeholder="Number of Iron ores"/>
+					</td>
+				</tr>
+        
+				<tr>
+					<td>
+						<p><img alt="Iron ore" src="" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supply" type="number" id="IronOre" placeholder="Number of Iron ores"/>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<p><img alt="Silver ore" src="" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supply" type="number" id="SilverOre" placeholder="Number of Silver ores"/>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<p><img alt="Iron ore" src="" /><img alt="Coal ore" src="" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supply" type="number" id="SteelOre" placeholder="Number of Iron & Coal ores"/>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<p><img alt="Gold ore" src="" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supply" type="number" id="GoldOre" placeholder="Number of Gold ores"/>
+					</td>
+					<td>
+						<input type="checkbox" id="GoldGloves" checked="true">
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<p><img alt="Mithril ore" src="" /><img alt="Coal ore" src="" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supply" type="number" id="MithrilOre" placeholder="Number of Mithril & Coal ores"/>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<p><img alt="Adamant ore" src="" /><img alt="Coal ore" src="" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supply" type="number" id="AdamantOre" placeholder="Number of Adamant & Coal ores"/>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<p><img alt="Runite ore" src="" /><img alt="Coal ore" src="" /></p>
+					</td>
+					<td class="AmountOfSupplies">
+						<input class="Supply" type="number" id="RuniteOre" placeholder="Number of Runite & Coal ores"/>
+					</td>
+				</tr>
+
+			</table>
+			
+			<input type="button" id="CalculateExp" value="Calculate" />
+		</div>
+		
+		<div id="response">
+			<div id="TotalExp"></div>
+			<div id="NewSmithingLevel"></div>
+			<div id="PercentToNewLevel"></div>
+		</div>
+		
+    </body>
 </html>
