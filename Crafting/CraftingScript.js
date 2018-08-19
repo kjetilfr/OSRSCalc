@@ -163,7 +163,6 @@ function SeaweedCalculator() {
 
 
 function CalculateIndividualSuppliesExp(TypeOfSupply, AmountOfSupplies) {
-	alert(TypeOfSupply + " " + AmountOfSupplies);
 	var AmountOfSupplies = parseInt(AmountOfSupplies);
     //Things you can make with Dhide
     if (TypeOfSupply === "Greendhide") {
