@@ -53,6 +53,7 @@ function CalculateExp() {
     var NewTotalExp = (parseInt(CurrentExp) + parseInt(ExperienceGained));
     document.getElementById("TotalExp").innerHTML = "New total experience: " + NewTotalExp.toLocaleString();
     var NewLevel = CalculateNewLevel(CurrentExp,ExperienceGained, "Smithing");
+	alert(CurrentExp,ExperienceGained, "Smithing");
     document.getElementById("NewSmithingLevel").innerHTML = "New smithing level: <span id='NewLevel'>" + NewLevel + "</span>, " + PercentToNewLevel(NewTotalExp) + "% to level " + (NewLevel + 1);
 }
 
