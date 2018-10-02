@@ -206,6 +206,33 @@ function CalculateIndividualSuppliesExp(TypeOfSupply, AmountOfSupplies) {
 			return Glassblowing["LightOrb"] * AmountOfSupplies;
 		}
 	}
+	if (TypeOfSupply === "Glassblowing2") {
+		var GlassblowingType = document.getElementById("GlassblowingType2").value;
+        if (GlassblowingType === "BeerGlass") {
+			return Glassblowing["BeerGlass"] * AmountOfSupplies;
+		}
+		if (GlassblowingType === "CandleLantern") {
+			return Glassblowing["CandleLantern"] * AmountOfSupplies;
+		}
+		if (GlassblowingType === "OilLamp") {
+			return Glassblowing["OilLamp"] * AmountOfSupplies;
+		}
+		if (GlassblowingType === "Vial") {
+			return Glassblowing["Vial"] * AmountOfSupplies;
+		}
+		if (GlassblowingType === "Fishbowl") {
+			return Glassblowing["Fishbowl"] * AmountOfSupplies;
+		}
+		if (GlassblowingType === "UnpoweredOrb") {
+			return Glassblowing["UnpoweredOrb"] * AmountOfSupplies;
+		}
+		if (GlassblowingType === "LanternLens") {
+			return Glassblowing["LanternLens"] * AmountOfSupplies;
+		}
+		if (GlassblowingType === "LightOrb") {
+			return Glassblowing["LightOrb"] * AmountOfSupplies;
+		}
+	}
 	
 	//Things you can make with cutting gems
     if (TypeOfSupply === "Opal") {
