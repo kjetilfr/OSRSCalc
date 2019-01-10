@@ -425,6 +425,19 @@ function Bones() {
 			}else {
 				alert("Unknown Bones");
 			}
+			else if (TypeOfBones === "HydraBones") {
+				if (TypeOfExp === "Ectofuntus") {
+					totalBoneExperience += Bones * 360;
+				}else if (TypeOfExp === "GildedAltar") {
+					totalBoneExperience += Bones * 315;
+				}else if (TypeOfExp === "Bury") {
+					totalBoneExperience += Bones * 90;
+				}else {
+					alert("Unknown type of exp");
+				}
+			}else {
+				alert("Unknown Bones");
+			}
 		}
 	}return totalBoneExperience;
 }
