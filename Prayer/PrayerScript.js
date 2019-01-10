@@ -422,10 +422,7 @@ function Bones() {
 				}else {
 					alert("Unknown type of exp");
 				}
-			}else {
-				alert("Unknown Bones");
-			}
-			else if (TypeOfBones === "HydraBones") {
+			}else if (TypeOfBones === "HydraBones") {
 				if (TypeOfExp === "Ectofuntus") {
 					totalBoneExperience += Bones * 360;
 				}else if (TypeOfExp === "GildedAltar") {
