@@ -424,31 +424,31 @@ function Bones() {
 				}
 			}else if (TypeOfBones === "WyrmBones") {
 				if (TypeOfExp === "Ectofuntus") {
-					totalBoneExperience += Bones * 120;
+					totalBoneExperience += Bones * 200;
 				}else if (TypeOfExp === "GildedAltar") {
-					totalBoneExperience += Bones * 105;
+					totalBoneExperience += Bones * 175;
 				}else if (TypeOfExp === "Bury") {
-					totalBoneExperience += Bones * 30;
+					totalBoneExperience += Bones * 50;
 				}else {
 					alert("Unknown type of exp");
 				}
 			}else if (TypeOfBones === "DrakeBones") {
 				if (TypeOfExp === "Ectofuntus") {
-					totalBoneExperience += Bones * 240;
+					totalBoneExperience += Bones * 320;
 				}else if (TypeOfExp === "GildedAltar") {
-					totalBoneExperience += Bones * 210;
+					totalBoneExperience += Bones * 280;
 				}else if (TypeOfExp === "Bury") {
-					totalBoneExperience += Bones * 60;
+					totalBoneExperience += Bones * 80;
 				}else {
 					alert("Unknown type of exp");
 				}
 			}else if (TypeOfBones === "HydraBones") {
 				if (TypeOfExp === "Ectofuntus") {
-					totalBoneExperience += Bones * 360;
+					totalBoneExperience += Bones * 440;
 				}else if (TypeOfExp === "GildedAltar") {
-					totalBoneExperience += Bones * 315;
+					totalBoneExperience += Bones * 385;
 				}else if (TypeOfExp === "Bury") {
-					totalBoneExperience += Bones * 90;
+					totalBoneExperience += Bones * 110;
 				}else {
 					alert("Unknown type of exp");
 				}
