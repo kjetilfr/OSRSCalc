@@ -146,7 +146,7 @@ function SeaweedCalculator() {
 	MoltenGlass += AmountOfSeaweed * 1.3;
 	
 	//Making giant seaweed into molten glass
-	MoltenGlass += AmountOfGiantSweaweed * 8.75;
+	MoltenGlass += AmountOfGiantSweaweed * 9.6;
 	
 	//Experience Gained
 	var ExperienceGained = (AmountOfSeaweed * 10) + (AmountOfGiantSweaweed * 6 * 10);
