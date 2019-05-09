@@ -5,7 +5,20 @@ var experienceArray = [0, 83, 174, 276, 388, 512, 650, 801, 969, 1154, 1358, 158
 247886, 273742, 302288, 333804, 368599, 407015, 449428, 496254, 547953, 605032, 668051, 737627, 
 814445, 899257, 992895, 1096278, 1210421, 1336443, 1475581, 1629200, 1798808, 1986068, 2192818, 
 2421087, 2673114, 2951373, 3258594, 3597792, 3972294, 4385776, 4842295, 5346332, 5902831, 6517253, 
-7195629, 7944614, 8771558, 9684577, 10692629, 11805606, 13034431];
+7195629, 7944614, 8771558, 9684577, 10692629, 11805606, 13034431, 14391160, 15889109, 17542976, 
+19368992, 21385072, 26068632, 28782069, 31777943, 35085654, 38737661, 42769801, 47221641, 52136869, 
+63555443, 70170840, 77474828, 85539082, 94442737, 104273167, 115126838, 127110260, 154948977, 
+171077457, 188884740, 200000000];
+
+//100	14,391,160	1,356,729	109	35,085,654	3,307,711	118	85,539,082	8,064,254
+//101	15,889,109	1,497,949	110	38,737,661	3,652,007	119	94,442,737	8,903,655
+//102	17,542,976	1,653,867	111	42,769,801	4,032,140	120	104,273,167	9,830,430
+//103	19,368,992	1,826,016	112	47,221,641	4,451,840	121	115,126,838	10,853,671
+//104	21,385,073	2,016,081	113	52,136,869	4,915,228	122	127,110,260	11,983,422105	23,611,006	2,225,933	114	57,563,718	5,426,849	123	140,341,028	13,230,768
+//106	26,068,632	2,457,626	115	63,555,443	5,991,725	124	154,948,977	14,607,949
+//107	28,782,069	2,713,437	116	70,170,840	6,615,397	125	171,077,457	16,128,480
+//108	31,777,943	2,995,874	117	77,474,828	7,303,988	126	188,884,740	17,807,283
+//Max	200,000,000	11,115,260
 
 //Take the current xp and the total xp gained and add them,
 //then take the xp and match it to the current level
@@ -233,8 +246,66 @@ function CalculateNewLevel(CurrentExp, totalExpGained, skill) {
 			return 97;
 		}if (newExp < experienceArray[98]) {
 			return 98;
-		}if (newExp => experienceArray[98]) {
+		}if (newExp < experienceArray[99]) {
 			return 99;
+		}if (newExp < experienceArray[100]) {
+			return 100;
+		}if (newExp < experienceArray[101]) {
+			return 101;
+		}if (newExp < experienceArray[102]) {
+			return 102;
+		}if (newExp < experienceArray[103]) {
+			return 103;
+		}if (newExp < experienceArray[104]) {
+			return 104;
+		}if (newExp < experienceArray[105]) {
+			return 105;
+		}if (newExp < experienceArray[106]) {
+			return 106;
+		}if (newExp < experienceArray[107]) {
+			return 107;
+		}if (newExp < experienceArray[107]) {
+			return 107;
+		}if (newExp < experienceArray[108]) {
+			return 108;
+		}if (newExp < experienceArray[109]) {
+			return 109;
+		}if (newExp < experienceArray[110]) {
+			return 110;
+		}if (newExp < experienceArray[111]) {
+			return 111;
+		}if (newExp < experienceArray[112]) {
+			return 112;
+		}if (newExp < experienceArray[113]) {
+			return 113;
+		}if (newExp < experienceArray[114]) {
+			return 114;
+		}if (newExp < experienceArray[115]) {
+			return 115;
+		}if (newExp < experienceArray[116]) {
+			return 116;
+		}if (newExp < experienceArray[117]) {
+			return 117;
+		}if (newExp < experienceArray[118]) {
+			return 118;
+		}if (newExp < experienceArray[119]) {
+			return 1119;
+		}if (newExp < experienceArray[120]) {
+			return 120;
+		}if (newExp < experienceArray[121]) {
+			return 121;
+		}if (newExp < experienceArray[122]) {
+			return 122;
+		}if (newExp < experienceArray[123]) {
+			return 123;
+		}if (newExp < experienceArray[124]) {
+			return 124;
+		}if (newExp < experienceArray[125]) {
+			return 125;
+		}if (newExp < experienceArray[126]) {
+			return 126;
+		}if (newExp => experienceArray[127]) {
+			return "MAX";
 	}
 }
 
