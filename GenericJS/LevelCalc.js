@@ -289,7 +289,7 @@ function CalculateNewLevel(CurrentExp, totalExpGained, skill) {
 		}if (newExp < experienceArray[118]) {
 			return 118;
 		}if (newExp < experienceArray[119]) {
-			return 1119;
+			return 119;
 		}if (newExp < experienceArray[120]) {
 			return 120;
 		}if (newExp < experienceArray[121]) {
