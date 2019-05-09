@@ -94,9 +94,12 @@ function CalculateExp() {
     document.getElementById("TotalExp").innerHTML = "New total experience: " + NewTotalExp.toLocaleString();
 	
 	//Outputs new level and % to new level
-    var NewLevel = CalculateNewLevel(CurrentExp,ExperienceGained, "Construction");
-    document.getElementById("NewConstructionLevel").innerHTML = "New construction level: <span id='NewLevel'>" + NewLevel + "</span>, " + PercentToNewLevel(NewTotalExp) + "% to level " + (NewLevel + 1);
-	
+	if (CurrentExp + ExperienceGained => 200000) {
+		document.getElementById("NewConstructionLevel").innerHTML = "Congratulations! You reached 200M experience.";
+	} else {
+		var NewLevel = CalculateNewLevel(CurrentExp,ExperienceGained, "Construction");
+		document.getElementById("NewConstructionLevel").innerHTML = "New construction level: <span id='NewLevel'>" + NewLevel + "</span>, " + PercentToNewLevel(NewTotalExp) + "% to level " + (NewLevel + 1);
+	}
 	//Outputs totalcost
 	document.getElementById("CostResponse").innerHTML = "Cost: " + TotalCostOfConstruction.toLocaleString() + "gp";
 	}
