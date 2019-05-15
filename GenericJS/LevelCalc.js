@@ -52,270 +52,278 @@ function CalculateNewLevel(CurrentExp, totalExpGained, skill) {
 		return 0;
 	}
 	
-	//for (i = 0; i < experienceArray.length; i++) {
-	//	return experienceArray[i];
-	//}
+	for (i = 0 ; i < experienceArray.length ; i++) {
+		if (NewExp > experienceArray[i] && NewExp < experienceArray[i+1]) {
+			return i+1;
+		} else if ( NewExp === experienceArray[i]) {
+			return i+1;
+		} else if (NewExp >= 200000000) {
+			return "MAX";
+		} else {
+    			return "Something Went Wrong! Please report to admin.";
+		}
+	}
 		
 	
 	
-	if (isNaN(newExp) === true) {
-		alert("Something went wrong");
-		return 0;
-		}if (newExp < experienceArray[1]) {
-			return 1;
-		}if (newExp < experienceArray[2]) {
-			return 2;
-		}if (newExp < experienceArray[3]) {
-			return 3;
-		}if (newExp < experienceArray[4]) {
-			return 4;
-		}if (newExp < experienceArray[5]) {
-			return 5;
-		}if (newExp < experienceArray[6]) {
-			return 6;
-		}if (newExp < experienceArray[7]) {
-			return 7;
-		}if (newExp < experienceArray[8]) {
-			return 8;
-		}if (newExp < experienceArray[9]) {
-			return 9;
-		}if (newExp < experienceArray[10]) {
-			return 10;
-		}if (newExp < experienceArray[11]) {
-			return 11;
-		}if (newExp < experienceArray[12]) {
-			return 12;
-		}if (newExp < experienceArray[13]) {
-			return 13;
-		}if (newExp < experienceArray[14]) {
-			return 14;
-		}if (newExp < experienceArray[15]) {
-			return 15;
-		}if (newExp < experienceArray[16]) {
-			return 16;
-		}if (newExp < experienceArray[17]) {
-			return 17;
-		}if (newExp < experienceArray[18]) {
-			return 18;
-		}if (newExp < experienceArray[19]) {
-			return 19;
-		}if (newExp < experienceArray[20]) {
-			return 20;
-		}if (newExp < experienceArray[21]) {
-			return 21;
-		}if (newExp < experienceArray[22]) {
-			return 22;
-		}if (newExp < experienceArray[23]) {
-			return 23;
-		}if (newExp < experienceArray[24]) {
-			return 24;
-		}if (newExp < experienceArray[25]) {
-			return 25;
-		}if (newExp < experienceArray[26]) {
-			return 26;
-		}if (newExp < experienceArray[27]) {
-			return 27;
-		}if (newExp < experienceArray[28]) {
-			return 28;
-		}if (newExp < experienceArray[29]) {
-			return 29;
-		}if (newExp < experienceArray[30]) {
-			return 30;
-		}if (newExp < experienceArray[31]) {
-			return 31;
-		}if (newExp < experienceArray[32]) {
-			return 32;
-		}if (newExp < experienceArray[33]) {
-			return 33;
-		}if (newExp < experienceArray[34]) {
-			return 34;
-		}if (newExp < experienceArray[35]) {
-			return 35;
-		}if (newExp < experienceArray[36]) {
-			return 36;
-		}if (newExp < experienceArray[37]) {
-			return 37;
-		}if (newExp < experienceArray[38]) {
-			return 38;
-		}if (newExp < experienceArray[39]) {
-			return 39;
-		}if (newExp < experienceArray[40]) {
-			return 40;
-		}if (newExp < experienceArray[41]) {
-			return 41;
-		}if (newExp < experienceArray[42]) {
-			return 42;
-		}if (newExp < experienceArray[43]) {
-			return 43;
-		}if (newExp < experienceArray[44]) {
-			return 44;
-		}if (newExp < experienceArray[45]) {
-			return 45;
-		}if (newExp < experienceArray[46]) {
-			return 46;
-		}if (newExp < experienceArray[47]) {
-			return 47;
-		}if (newExp < experienceArray[48]) {
-			return 48;
-		}if (newExp < experienceArray[49]) { 
-			return 49;
-		}if (newExp < experienceArray[50]) {
-			return 50;
-		}if (newExp < experienceArray[51]) {
-			return 51;
-		}if (newExp < experienceArray[52]) {
-			return 52;
-		}if (newExp < experienceArray[53]) {
-			return 53;
-		}if (newExp < experienceArray[54]) {
-			return 54;
-		}if (newExp < experienceArray[55]) {
-			return 55;
-		}if (newExp < experienceArray[56]) {
-			return 56;
-		}if (newExp < experienceArray[57]) {
-			return 57;
-		}if (newExp < experienceArray[58]) {
-			return 58;
-		}if (newExp < experienceArray[59]) {
-			return 59;
-		}if (newExp < experienceArray[60]) {
-			return 60;
-		}if (newExp < experienceArray[61]) {
-			return 61;
-		}if (newExp < experienceArray[62]) {
-			return 62;
-		}if (newExp < experienceArray[63]) {
-			return 63;
-		}if (newExp < experienceArray[64]) {
-			return 64;
-		}if (newExp < experienceArray[65]) {
-			return 65;
-		}if (newExp < experienceArray[66]) {
-			return 66;
-		}if (newExp < experienceArray[67]) {
-			return 67;
-		}if (newExp < experienceArray[68]) {
-			return 68;
-		}if (newExp < experienceArray[69]) {
-			return 69;
-		}if (newExp < experienceArray[70]) {
-			return 70;
-		}if (newExp < experienceArray[71]) {
-			return 71;
-		}if (newExp < experienceArray[72]) {
-			return 72;
-		}if (newExp < experienceArray[73]) {
-			return 73;
-		}if (newExp < experienceArray[74]) {
-			return 74;
-		}if (newExp < experienceArray[75]) {
-			return 75;
-		}if (newExp < experienceArray[76]) {
-			return 76;
-		}if (newExp < experienceArray[77]) {
-			return 77;
-		}if (newExp < experienceArray[78]) {
-			return 78;
-		}if (newExp < experienceArray[79]) {
-			return 79;
-		}if (newExp < experienceArray[80]) {
-			return 80;
-		}if (newExp < experienceArray[81]) {
-			return 81;
-		}if (newExp < experienceArray[82]) {
-			return 82;
-		}if (newExp < experienceArray[83]) {
-			return 83;
-		}if (newExp < experienceArray[84]) {
-			return 84;
-		}if (newExp < experienceArray[85]) {
-			return 85;
-		}if (newExp < experienceArray[86]) {
-			return 86;
-		}if (newExp < experienceArray[87]) {
-			return 87;
-		}if (newExp < experienceArray[88]) {
-			return 88;
-		}if (newExp < experienceArray[89]) {
-			return 89;
-		}if (newExp < experienceArray[90]) {
-			return 90;
-		}if (newExp < experienceArray[91]) {
-			return 91;
-		}if (newExp < experienceArray[92]) {
-			return 92;
-		}if (newExp < experienceArray[93]) {
-			return 93;
-		}if (newExp < experienceArray[94]) {
-			return 94;
-		}if (newExp < experienceArray[95]) {
-			return 95;
-		}if (newExp < experienceArray[96]) {
-			return 96;
-		}if (newExp < experienceArray[97]) {
-			return 97;
-		}if (newExp < experienceArray[98]) {
-			return 98;
-		}if (newExp < experienceArray[99]) {
-			return 99;
-		}if (newExp < experienceArray[100]) {
-			return 100;
-		}if (newExp < experienceArray[101]) {
-			return 101;
-		}if (newExp < experienceArray[102]) {
-			return 102;
-		}if (newExp < experienceArray[103]) {
-			return 103;
-		}if (newExp < experienceArray[104]) {
-			return 104;
-		}if (newExp < experienceArray[105]) {
-			return 105;
-		}if (newExp < experienceArray[106]) {
-			return 106;
-		}if (newExp < experienceArray[107]) {
-			return 107;
-		}if (newExp < experienceArray[108]) {
-			return 108;
-		}if (newExp < experienceArray[109]) {
-			return 109;
-		}if (newExp < experienceArray[110]) {
-			return 110;
-		}if (newExp < experienceArray[111]) {
-			return 111;
-		}if (newExp < experienceArray[112]) {
-			return 112;
-		}if (newExp < experienceArray[113]) {
-			return 113;
-		}if (newExp < experienceArray[114]) {
-			return 114;
-		}if (newExp < experienceArray[115]) {
-			return 115;
-		}if (newExp < experienceArray[116]) {
-			return 116;
-		}if (newExp < experienceArray[117]) {
-			return 117;
-		}if (newExp < experienceArray[118]) {
-			return 118;
-		}if (newExp < experienceArray[119]) {
-			return 119;
-		}if (newExp < experienceArray[120]) {
-			return 120;
-		}if (newExp < experienceArray[121]) {
-			return 121;
-		}if (newExp < experienceArray[122]) {
-			return 122;
-		}if (newExp < experienceArray[123]) {
-			return 123;
-		}if (newExp < experienceArray[124]) {
-			return 124;
-		}if (newExp < experienceArray[125]) {
-			return 125;
-		}if (newExp < experienceArray[126]) {
-			return 126;
-		}if (newExp => experienceArray[127]) {
-			return "MAX";
-	}
+	//if (isNaN(newExp) === true) {
+	//	alert("Something went wrong");
+	//	return 0;
+	//	}if (newExp < experienceArray[1]) {
+	//		return 1;
+	//	}if (newExp < experienceArray[2]) {
+	//		return 2;
+	//	}if (newExp < experienceArray[3]) {
+	//		return 3;
+	//	}if (newExp < experienceArray[4]) {
+	//		return 4;
+	//	}if (newExp < experienceArray[5]) {
+	//		return 5;
+	//	}if (newExp < experienceArray[6]) {
+	//		return 6;
+	//	}if (newExp < experienceArray[7]) {
+	//		return 7;
+	//	}if (newExp < experienceArray[8]) {
+	//		return 8;
+	//	}if (newExp < experienceArray[9]) {
+	//		return 9;
+	//	}if (newExp < experienceArray[10]) {
+	//		return 10;
+	//	}if (newExp < experienceArray[11]) {
+	//		return 11;
+	//	}if (newExp < experienceArray[12]) {
+	//		return 12;
+	//	}if (newExp < experienceArray[13]) {
+	//		return 13;
+	//	}if (newExp < experienceArray[14]) {
+	//		return 14;
+	//	}if (newExp < experienceArray[15]) {
+	//		return 15;
+	//	}if (newExp < experienceArray[16]) {
+	//		return 16;
+	//	}if (newExp < experienceArray[17]) {
+	//		return 17;
+	//	}if (newExp < experienceArray[18]) {
+	//		return 18;
+	//	}if (newExp < experienceArray[19]) {
+	//		return 19;
+	//	}if (newExp < experienceArray[20]) {
+	//		return 20;
+	//	}if (newExp < experienceArray[21]) {
+	//		return 21;
+	//	}if (newExp < experienceArray[22]) {
+	//		return 22;
+	//	}if (newExp < experienceArray[23]) {
+	//		return 23;
+	//	}if (newExp < experienceArray[24]) {
+	//		return 24;
+	//	}if (newExp < experienceArray[25]) {
+	//		return 25;
+	//	}if (newExp < experienceArray[26]) {
+	//		return 26;
+	//	}if (newExp < experienceArray[27]) {
+	//		return 27;
+	//	}if (newExp < experienceArray[28]) {
+	//		return 28;
+	//	}if (newExp < experienceArray[29]) {
+	//		return 29;
+	//	}if (newExp < experienceArray[30]) {
+	//		return 30;
+	//	}if (newExp < experienceArray[31]) {
+	//		return 31;
+	//	}if (newExp < experienceArray[32]) {
+	//		return 32;
+	//	}if (newExp < experienceArray[33]) {
+	//		return 33;
+	//	}if (newExp < experienceArray[34]) {
+	//		return 34;
+	//	}if (newExp < experienceArray[35]) {
+	//		return 35;
+	//	}if (newExp < experienceArray[36]) {
+	//		return 36;
+	//	}if (newExp < experienceArray[37]) {
+	//		return 37;
+	//	}if (newExp < experienceArray[38]) {
+	//		return 38;
+	//	}if (newExp < experienceArray[39]) {
+	//		return 39;
+	//	}if (newExp < experienceArray[40]) {
+	//		return 40;
+	//	}if (newExp < experienceArray[41]) {
+	//		return 41;
+	//	}if (newExp < experienceArray[42]) {
+	//		return 42;
+	//	}if (newExp < experienceArray[43]) {
+	//		return 43;
+	//	}if (newExp < experienceArray[44]) {
+	//		return 44;
+	//	}if (newExp < experienceArray[45]) {
+	//		return 45;
+	//	}if (newExp < experienceArray[46]) {
+	//		return 46;
+	//	}if (newExp < experienceArray[47]) {
+	//		return 47;
+	//	}if (newExp < experienceArray[48]) {
+	//		return 48;
+	//	}if (newExp < experienceArray[49]) { 
+	//		return 49;
+	//	}if (newExp < experienceArray[50]) {
+	//		return 50;
+	//	}if (newExp < experienceArray[51]) {
+	//		return 51;
+	//	}if (newExp < experienceArray[52]) {
+	//		return 52;
+	//	}if (newExp < experienceArray[53]) {
+	//		return 53;
+	//	}if (newExp < experienceArray[54]) {
+	//		return 54;
+	//	}if (newExp < experienceArray[55]) {
+	//		return 55;
+	//	}if (newExp < experienceArray[56]) {
+	//		return 56;
+	//	}if (newExp < experienceArray[57]) {
+	//		return 57;
+	//	}if (newExp < experienceArray[58]) {
+	//		return 58;
+	//	}if (newExp < experienceArray[59]) {
+	//		return 59;
+	//	}if (newExp < experienceArray[60]) {
+	//		return 60;
+	//	}if (newExp < experienceArray[61]) {
+	//		return 61;
+	//	}if (newExp < experienceArray[62]) {
+	//		return 62;
+	//	}if (newExp < experienceArray[63]) {
+	//		return 63;
+	//	}if (newExp < experienceArray[64]) {
+	//		return 64;
+	//	}if (newExp < experienceArray[65]) {
+	//		return 65;
+	//	}if (newExp < experienceArray[66]) {
+	//		return 66;
+	//	}if (newExp < experienceArray[67]) {
+	//		return 67;
+	//	}if (newExp < experienceArray[68]) {
+	//		return 68;
+	//	}if (newExp < experienceArray[69]) {
+	//		return 69;
+	//	}if (newExp < experienceArray[70]) {
+	//		return 70;
+	//	}if (newExp < experienceArray[71]) {
+	//		return 71;
+	//	}if (newExp < experienceArray[72]) {
+	//		return 72;
+	//	}if (newExp < experienceArray[73]) {
+	//		return 73;
+	//	}if (newExp < experienceArray[74]) {
+	//		return 74;
+	//	}if (newExp < experienceArray[75]) {
+	//		return 75;
+	//	}if (newExp < experienceArray[76]) {
+	//		return 76;
+	//	}if (newExp < experienceArray[77]) {
+	//		return 77;
+	//	}if (newExp < experienceArray[78]) {
+	//		return 78;
+	//	}if (newExp < experienceArray[79]) {
+	//		return 79;
+	//	}if (newExp < experienceArray[80]) {
+	//		return 80;
+	//	}if (newExp < experienceArray[81]) {
+	//		return 81;
+	//	}if (newExp < experienceArray[82]) {
+	//		return 82;
+	//	}if (newExp < experienceArray[83]) {
+	//		return 83;
+	//	}if (newExp < experienceArray[84]) {
+	//		return 84;
+	//	}if (newExp < experienceArray[85]) {
+	//		return 85;
+	//	}if (newExp < experienceArray[86]) {
+	//		return 86;
+	//	}if (newExp < experienceArray[87]) {
+	//		return 87;
+	//	}if (newExp < experienceArray[88]) {
+	//		return 88;
+	//	}if (newExp < experienceArray[89]) {
+	//		return 89;
+	//	}if (newExp < experienceArray[90]) {
+	//		return 90;
+	//	}if (newExp < experienceArray[91]) {
+	//		return 91;
+	//	}if (newExp < experienceArray[92]) {
+	//		return 92;
+	//	}if (newExp < experienceArray[93]) {
+	//		return 93;
+	//	}if (newExp < experienceArray[94]) {
+	//		return 94;
+	//	}if (newExp < experienceArray[95]) {
+	//		return 95;
+	//	}if (newExp < experienceArray[96]) {
+	//		return 96;
+	//	}if (newExp < experienceArray[97]) {
+	//		return 97;
+	//	}if (newExp < experienceArray[98]) {
+	//		return 98;
+	//	}if (newExp < experienceArray[99]) {
+	//		return 99;
+	//	}if (newExp < experienceArray[100]) {
+	//		return 100;
+	//	}if (newExp < experienceArray[101]) {
+	//		return 101;
+	//	}if (newExp < experienceArray[102]) {
+	//		return 102;
+	//	}if (newExp < experienceArray[103]) {
+	//		return 103;
+	//	}if (newExp < experienceArray[104]) {
+	//		return 104;
+	//	}if (newExp < experienceArray[105]) {
+	//		return 105;
+	//	}if (newExp < experienceArray[106]) {
+	//		return 106;
+	//	}if (newExp < experienceArray[107]) {
+	//		return 107;
+	//	}if (newExp < experienceArray[108]) {
+	//		return 108;
+	//	}if (newExp < experienceArray[109]) {
+	//		return 109;
+	//	}if (newExp < experienceArray[110]) {
+	//		return 110;
+	//	}if (newExp < experienceArray[111]) {
+	//		return 111;
+	//	}if (newExp < experienceArray[112]) {
+	//		return 112;
+	//	}if (newExp < experienceArray[113]) {
+	//		return 113;
+	//	}if (newExp < experienceArray[114]) {
+	//		return 114;
+	//	}if (newExp < experienceArray[115]) {
+	//		return 115;
+	//	}if (newExp < experienceArray[116]) {
+	//		return 116;
+	//	}if (newExp < experienceArray[117]) {
+	//		return 117;
+	//	}if (newExp < experienceArray[118]) {
+	//		return 118;
+	//	}if (newExp < experienceArray[119]) {
+	//		return 119;
+	//	}if (newExp < experienceArray[120]) {
+	//		return 120;
+	//	}if (newExp < experienceArray[121]) {
+	//		return 121;
+	//	}if (newExp < experienceArray[122]) {
+	//		return 122;
+	//	}if (newExp < experienceArray[123]) {
+	//		return 123;
+	//	}if (newExp < experienceArray[124]) {
+	//		return 124;
+	//	}if (newExp < experienceArray[125]) {
+	//		return 125;
+	//	}if (newExp < experienceArray[126]) {
+	//		return 126;
+	//	}if (newExp => experienceArray[127]) {
+	//		return "MAX";
+	//}
 }
 
 //Find percent to the new level
