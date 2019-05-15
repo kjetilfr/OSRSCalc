@@ -50,6 +50,17 @@ function CalculateNewLevel(CurrentExp, totalExpGained, skill) {
 	if (isNaN(newExp) === true) {
 		alert("Something went wrong");
 		return 0;
+	}
+	
+	//for (i = 0; i < experienceArray.length; i++) {
+	//	return experienceArray[i];
+	//}
+		
+	
+	
+	if (isNaN(newExp) === true) {
+		alert("Something went wrong");
+		return 0;
 		}if (newExp < experienceArray[1]) {
 			return 1;
 		}if (newExp < experienceArray[2]) {
