@@ -379,6 +379,8 @@ function Bones() {
 					totalBoneExperience += Bones * 52.5;
 				}else if (TypeOfExp === "Bury") {
 					totalBoneExperience += Bones * 15;
+				}else if (TypeOfExp === "WildyAltar") {
+					totalBoneExperience += Bones * 52.5 * 1.5;
 				}else {
 					alert("Unknown type of exp");
 				}
@@ -389,6 +391,8 @@ function Bones() {
 					totalBoneExperience += Bones * 105;
 				}else if (TypeOfExp === "Bury") {
 					totalBoneExperience += Bones * 30;
+				}else if (TypeOfExp === "WildyAltar") {
+					totalBoneExperience += Bones * 105 * 1.5;
 				}else {
 					alert("Unknown type of exp");
 				}
@@ -399,6 +403,8 @@ function Bones() {
 					totalBoneExperience += Bones * 252;
 				}else if (TypeOfExp === "Bury") {
 					totalBoneExperience += Bones * 72;
+				}else if (TypeOfExp === "WildyAltar") {
+					totalBoneExperience += Bones * 252 * 1.5;
 				}else {
 					alert("Unknown type of exp");
 				}
@@ -409,6 +415,8 @@ function Bones() {
 					totalBoneExperience += Bones * 437.5;
 				}else if (TypeOfExp === "Bury") {
 					totalBoneExperience += Bones * 125;
+				}else if (TypeOfExp === "WildyAltar") {
+					totalBoneExperience += Bones * 437.5 * 1.5;
 				}else {
 					alert("Unknown type of exp");
 				}
@@ -419,6 +427,8 @@ function Bones() {
 					totalBoneExperience += Bones * 525;
 				}else if (TypeOfExp === "Bury") {
 					totalBoneExperience += Bones * 150;
+				}else if (TypeOfExp === "WildyAltar") {
+					totalBoneExperience += Bones * 525 * 1.5;
 				}else {
 					alert("Unknown type of exp");
 				}
@@ -429,6 +439,8 @@ function Bones() {
 					totalBoneExperience += Bones * 175;
 				}else if (TypeOfExp === "Bury") {
 					totalBoneExperience += Bones * 50;
+				}else if (TypeOfExp === "WildyAltar") {
+					totalBoneExperience += Bones * 175 * 1.5;
 				}else {
 					alert("Unknown type of exp");
 				}
@@ -439,6 +451,8 @@ function Bones() {
 					totalBoneExperience += Bones * 280;
 				}else if (TypeOfExp === "Bury") {
 					totalBoneExperience += Bones * 80;
+				}else if (TypeOfExp === "WildyAltar") {
+					totalBoneExperience += Bones * 280 * 1.5;
 				}else {
 					alert("Unknown type of exp");
 				}
@@ -449,6 +463,8 @@ function Bones() {
 					totalBoneExperience += Bones * 385;
 				}else if (TypeOfExp === "Bury") {
 					totalBoneExperience += Bones * 110;
+				}else if (TypeOfExp === "WildyAltar") {
+					totalBoneExperience += Bones * 385 * 1.5;
 				}else {
 					alert("Unknown type of exp");
 				}
