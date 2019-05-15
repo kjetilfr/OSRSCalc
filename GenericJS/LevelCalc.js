@@ -53,11 +53,11 @@ function CalculateNewLevel(CurrentExp, totalExpGained, skill) {
 	}
 	
 	for (i = 0 ; i < experienceArray.length ; i++) {
-		if (NewExp > experienceArray[i] && NewExp < experienceArray[i+1]) {
+		if (newExp > experienceArray[i] && newExp < experienceArray[i+1]) {
 			return i+1;
-		} else if ( NewExp === experienceArray[i]) {
+		} else if ( newExp === experienceArray[i]) {
 			return i+1;
-		} else if (NewExp >= 200000000) {
+		} else if (newExp >= 200000000) {
 			return "MAX";
 		} else {
     			return "Something Went Wrong! Please report to admin.";
