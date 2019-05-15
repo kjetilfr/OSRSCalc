@@ -59,9 +59,9 @@ function CalculateNewLevel(CurrentExp, totalExpGained, skill) {
 			return i+1;
 		} else if (newExp >= 200000000) {
 			return "MAX";
-		} else {
-    			return "Something Went Wrong! Please report to admin.";
-		}
+		}// else {
+    		//	return "Something Went Wrong! Please report to admin.";
+		//}
 	}
 		
 	
