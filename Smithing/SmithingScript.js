@@ -31,6 +31,9 @@ var Bar = {
 	Adamant: 62.5,
 	Runite: 75
  };
+var Other = {
+	cannonballs: 25.6
+};
 
 function CalculateExp() {
 	//Check currentExp value (set to 0 if empty(
@@ -110,6 +113,10 @@ function CalculateIndividualSupplyExp(SupplyID, SupplyAmount) {
 	}
 	if (SupplyID === "RuniteBar") {
 		return Bar["Runite"] * SupplyAmount;
+	}
+	//Other
+	if (SupplyID === "cannonballs") {
+		return Other["cannonballs"] * SupplyAmount;
 	}
 	else {
 		alert("Unknown type of ore/bar, please try again");
