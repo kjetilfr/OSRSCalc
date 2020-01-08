@@ -94,8 +94,7 @@ function CalculateExp() {
     document.getElementById("TotalExp").innerHTML = "New total experience: " + NewTotalExp.toLocaleString();
 	
 	//Outputs new level and % to new level
-	if (CurrentExp + ExperienceGained >= 200000) {
-		alert(CurrentExp + ExperienceGained);
+	if (NewTotalExp >= 200000000) {
 		document.getElementById("NewConstructionLevel").innerHTML = "Congratulations! You reached 200M experience.";
 	} else {
 		var NewLevel = CalculateNewLevel(CurrentExp,ExperienceGained, "Construction");
