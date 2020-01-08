@@ -6,7 +6,7 @@ function run() {
 	};
 }
 
-//Herbs
+//Planks Work
 var CurrentExp = 0;
 
 var Plank = {
