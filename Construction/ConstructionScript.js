@@ -1,13 +1,12 @@
 window.onload = run;
-alert("hello");
+
 function run() {
-	alert("hoi");
 	document.getElementById("CalculateExp").onclick = function() {
 		CalculateExp()
 	};
 }
 
-//Herbs
+//Planks
 var CurrentExp = 0;
 
 var Plank = {
@@ -28,7 +27,6 @@ var MahoganyPlank = {
 };
 
 function CalculateExp() {
-	alert("hi");
 	//Check currentExp value (set to 0 if empty)
     CurrentExp = document.getElementById("CurrentExp").value;
     if (CurrentExp === null || CurrentExp === 0 || CurrentExp === "") {
