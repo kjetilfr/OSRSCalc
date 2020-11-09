@@ -41,6 +41,13 @@ function CalculateExp() {
 	
 	var TotalAmountOfLogPlank = 0;
 	
+    //Check Multiplier
+	Multiplier = document.getElementById("Multiplier").value;
+	if (Multiplier === null || Multiplier === 0 || Multiplier === "" {
+		Multiplier = 1;
+	} else {
+	    	Multiplier = document.getElementById("Multiplier").value;
+	    }
     //Go through the Construcion that have input and calculate xp gained
     var countAmountOfPlankInput = document.getElementsByClassName("Plank").length;
     for (i = 0 ; i < countAmountOfPlankInput ; i++) {
