@@ -89,6 +89,8 @@ function CalculateExp() {
     if (CurrentExp === null || CurrentExp === 0 || CurrentExp === "") {
 		CurrentExp = 0;
 	}var ExperienceGained = 0;
+	
+	var ActualMultiplier = GetMultiplier();
     //Go through the FOOD and calculate xp gained
     var countAmountOfFood = document.getElementsByClassName("Food").length;
     for (i = 0; i < countAmountOfFood ; i++) {
@@ -97,7 +99,7 @@ function CalculateExp() {
             continue;
 		}else {
 			//Calculate food experience
-            ExperienceGained += CalculateIndividualFoodExp(document.getElementsByClassName("Food")[i].id, document.getElementsByClassName("Food")[i].value);
+            ExperienceGained += CalculateIndividualFoodExp(document.getElementsByClassName("Food")[i].id, document.getElementsByClassName("Food")[i].value) * ActualMultiplier;
 		}
 	}
 	//Output stuff
@@ -301,4 +303,16 @@ function CalculateIndividualFoodExp(TypeOfFood, AmountOfFood) {
 	else {
 		alert("Unknown type of food, please try again");
 	}
+}
+
+function GetMultiplier() {
+//Check Multiplier
+	Multiplier = document.getElementById("Multiplier").value;
+	if (Multiplier === null || Multiplier === 0 || Multiplier === "") {
+		Multiplier = 1;
+		return(Multiplier);
+	} else {
+	    	Multiplier = document.getElementById("Multiplier").value;
+		return(Multiplier);
+	    }	
 }
