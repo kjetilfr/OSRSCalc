@@ -187,7 +187,7 @@ function CalculateIndividualConstructionExp(TypeOfPlank, AmountOfPlanks) {
 function GetMultiplier() {
 //Check Multiplier
 	Multiplier = document.getElementById("Multiplier").value;
-	if (Multiplier === null || Multiplier === 0 || Multiplier === "" {
+	if (Multiplier === null || Multiplier === 0 || Multiplier === "") {
 		Multiplier = 1;
 	    	console.log("Multiplier: 1");
 		return(Multiplier);
