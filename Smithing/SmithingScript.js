@@ -52,8 +52,10 @@ function CalculateExp() {
             ExperienceGained += CalculateIndividualSupplyExp(document.getElementsByClassName("Supply")[i].id, document.getElementsByClassName("Supply")[i].value);
 		}
 	}
+	
+	var ActualMultiplier = GetMultiplier();
 	//Output stuff
-    var NewTotalExp = (parseInt(CurrentExp) + parseInt(ExperienceGained));
+    var NewTotalExp = (parseInt(CurrentExp) + parseInt(ExperienceGained)) * ActualMultiplier;
     document.getElementById("TotalExp").innerHTML = "New total experience: " + NewTotalExp.toLocaleString();
     var NewLevel = CalculateNewLevel(CurrentExp,ExperienceGained, "Smithing");
     document.getElementById("NewSmithingLevel").innerHTML = "New smithing level: <span id='NewLevel'>" + NewLevel + "</span>, " + PercentToNewLevel(NewTotalExp) + "% to level " + (NewLevel + 1);
@@ -121,4 +123,18 @@ function CalculateIndividualSupplyExp(SupplyID, SupplyAmount) {
 	else {
 		alert("Unknown type of ore/bar, please try again");
 	}
+}
+
+function GetMultiplier() {
+//Check Multiplier
+	Multiplier = document.getElementById("Multiplier").value;
+	if (Multiplier === null || Multiplier === 0 || Multiplier === "") {
+		Multiplier = 1;
+	    	console.log("Multiplier: 1");
+		return(Multiplier);
+	} else {
+	    	Multiplier = document.getElementById("Multiplier").value;
+		console.log(Multiplier);
+		return(Multiplier);
+	    }	
 }
