@@ -134,8 +134,11 @@ function CalculateExp() {
 			//Calculate potion experience
             ExperienceGained += CalculateIndividualSpecialExp(document.getElementsByClassName("Special")[i].id);
 		}
-	}//Output stuff
-    var NewTotalExp = (parseInt(CurrentExp) + parseInt(ExperienceGained));
+	}
+	
+	var ActualMultiplier = GetMultiplier();
+	//Output stuff
+    var NewTotalExp = (parseInt(CurrentExp) + parseInt(ExperienceGained)) * ActualMultiplier;
     document.getElementById("TotalExp").innerHTML = "New total experience: " + NewTotalExp.toLocaleString();
     var NewLevel = CalculateNewLevel(CurrentExp,ExperienceGained, "Herblore");
     document.getElementById("NewHerbloreLevel").innerHTML = "New herblore level: <span id='NewLevel'>" + NewLevel + "</span>, " + PercentToNewLevel(NewTotalExp) + "% to level " + (NewLevel + 1);
@@ -393,4 +396,18 @@ function CalculateGrimyExp(TypeOfHerb, AmountOfHerb) {
 	}else {
 		alert("Unknown type of grimy herb, please try again");
 	}
+}
+
+function GetMultiplier() {
+//Check Multiplier
+	Multiplier = document.getElementById("Multiplier").value;
+	if (Multiplier === null || Multiplier === 0 || Multiplier === "") {
+		Multiplier = 1;
+	    	console.log("Multiplier: 1");
+		return(Multiplier);
+	} else {
+	    	Multiplier = document.getElementById("Multiplier").value;
+		console.log(Multiplier);
+		return(Multiplier);
+	    }	
 }
