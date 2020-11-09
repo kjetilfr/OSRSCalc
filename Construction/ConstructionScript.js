@@ -41,15 +41,8 @@ function CalculateExp() {
 	
 	var TotalAmountOfLogPlank = 0;
 	
-    //Check Multiplier
-	Multiplier = document.getElementById("Multiplier").value;
-	if (Multiplier === null || Multiplier === 0 || Multiplier === "" {
-		Multiplier = 1;
-	    	Console.Log("Multiplier: 1");
-	} else {
-	    	Multiplier = document.getElementById("Multiplier").value;
-		Console.Log(Multiplier);
-	    }
+	var ActualMultiplier = GetMultiplier();
+    
     //Go through the Construcion that have input and calculate xp gained
     var countAmountOfPlankInput = document.getElementsByClassName("Plank").length;
     for (i = 0 ; i < countAmountOfPlankInput ; i++) {
@@ -60,7 +53,7 @@ function CalculateExp() {
 			//Calculate plank experience
 			var TypeOfPlank = document.getElementsByClassName("Plank")[i].id;
 			var AmountOfPlanks = document.getElementsByClassName("Plank")[i].value;
-            ExperienceGained += CalculateIndividualConstructionExp(TypeOfPlank, AmountOfPlanks) * Multiplier;
+            ExperienceGained += CalculateIndividualConstructionExp(TypeOfPlank, AmountOfPlanks) * ActualMultiplier;
 			
 			
 			if (isNaN(AmountOfPlanks)) {
@@ -189,4 +182,18 @@ function CalculateIndividualConstructionExp(TypeOfPlank, AmountOfPlanks) {
 	else {
 		alert("Unknown type of plank, please try again");
 	}
+}
+
+function GetMultiplier() {
+//Check Multiplier
+	Multiplier = document.getElementById("Multiplier").value;
+	if (Multiplier === null || Multiplier === 0 || Multiplier === "" {
+		Multiplier = 1;
+	    	console.log("Multiplier: 1");
+		return(Multiplier);
+	} else {
+	    	Multiplier = document.getElementById("Multiplier").value;
+		console.log(Multiplier);
+		return(Multiplier);
+	    }	
 }
