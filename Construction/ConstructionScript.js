@@ -6,7 +6,10 @@ function run() {
 	};
 }
 
+var Multiplier = 1;
+
 //Planks
+
 var CurrentExp = 0;
 
 var Plank = {
@@ -48,7 +51,7 @@ function CalculateExp() {
 			//Calculate plank experience
 			var TypeOfPlank = document.getElementsByClassName("Plank")[i].id;
 			var AmountOfPlanks = document.getElementsByClassName("Plank")[i].value;
-            ExperienceGained += CalculateIndividualConstructionExp(TypeOfPlank, AmountOfPlanks);
+            ExperienceGained += CalculateIndividualConstructionExp(TypeOfPlank, AmountOfPlanks) * Multiplier;
 			
 			
 			if (isNaN(AmountOfPlanks)) {
