@@ -337,7 +337,9 @@ function ExpFromHeads () {
 		totalNatureRunes += EnsouledDragon.runes.Nature * DragonHeadInput.value;
 		totalBloodRunes += EnsouledDragon.runes.Blood * DragonHeadInput.value;
 	}
-	var NewTotalExp = (parseInt(totalExpGained) + parseInt(CurrentExp) + Bones());
+	var ActualMultiplier = GetMultiplier();
+	//output
+	var NewTotalExp = (parseInt(totalExpGained) + parseInt(CurrentExp) + Bones()) * ActualMultiplier;
 	document.getElementById("TotalExp").innerHTML = NewTotalExp.toLocaleString() + " prayer experience";
 	
 	var NewLevel = CalculateNewLevel(CurrentExp, totalExpGained, "Prayer");
@@ -473,4 +475,18 @@ function Bones() {
 			}
 		}
 	}return totalBoneExperience;
+}
+
+function GetMultiplier() {
+//Check Multiplier
+	Multiplier = document.getElementById("Multiplier").value;
+	if (Multiplier === null || Multiplier === 0 || Multiplier === "") {
+		Multiplier = 1;
+	    	console.log("Multiplier: 1");
+		return(Multiplier);
+	} else {
+	    	Multiplier = document.getElementById("Multiplier").value;
+		console.log(Multiplier);
+		return(Multiplier);
+	    }	
 }
