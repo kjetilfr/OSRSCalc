@@ -111,6 +111,7 @@ function CalculateExp() {
 	
 	var ExperienceGained = 0;
 	
+	var ActualMultiplier = GetMultiplier();
     //Go through the Supplies and calculate xp gained
     var countAmountOfSupplies = document.getElementsByClassName("Supplies").length;
     for (i = 0; i < countAmountOfSupplies ; i++) {
@@ -119,7 +120,7 @@ function CalculateExp() {
             continue;
 		}else {
 			//Calculate Supply experience
-            ExperienceGained += CalculateIndividualSuppliesExp(document.getElementsByClassName("Supplies")[i].id, document.getElementsByClassName("Supplies")[i].value);
+            ExperienceGained += CalculateIndividualSuppliesExp(document.getElementsByClassName("Supplies")[i].id, document.getElementsByClassName("Supplies")[i].value) * ActualMultiplier;
 		}
 	}
 	//Output stuff
@@ -468,4 +469,18 @@ function CalculateIndividualSuppliesExp(TypeOfSupply, AmountOfSupplies) {
 	else {
 		alert("Unknown type, please try again");
 	}
+}
+
+function GetMultiplier() {
+//Check Multiplier
+	Multiplier = document.getElementById("Multiplier").value;
+	if (Multiplier === null || Multiplier === 0 || Multiplier === "") {
+		Multiplier = 1;
+	    	console.log("Multiplier: 1");
+		return(Multiplier);
+	} else {
+	    	Multiplier = document.getElementById("Multiplier").value;
+		console.log(Multiplier);
+		return(Multiplier);
+	    }	
 }
