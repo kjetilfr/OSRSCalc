@@ -42,6 +42,7 @@ function CalculateExp() {
 		CurrentExp = 0;
 	}var ExperienceGained = 0;
     //Go through the Supplies and calculate xp gained
+	var ActualMultiplier = GetMultiplier();
     var countAmountOfSupplies = document.getElementsByClassName("Supply").length;
     for (i = 0; i < countAmountOfSupplies ; i++) {
 		if (document.getElementsByClassName("Supply")[i].value === null || document.getElementsByClassName("Supply")[i].value === 0 || document.getElementsByClassName("Supply")[i].value === "") {
@@ -53,7 +54,7 @@ function CalculateExp() {
 		}
 	}
 	
-	var ActualMultiplier = GetMultiplier();
+	
 	//Output stuff
     var NewTotalExp = (parseInt(CurrentExp) + parseInt(ExperienceGained));
     document.getElementById("TotalExp").innerHTML = "New total experience: " + NewTotalExp.toLocaleString();
