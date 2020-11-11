@@ -124,6 +124,7 @@ function CalculateExp() {
 			document.getElementsByClassName("Herb")[i].value);
 		}
 	}//Go through the SPECIAL and calculate xp gained
+	var ActualMultiplier = GetMultiplier();
     var countAmountOfSpecial = document.getElementsByClassName("Special").length;
     for (i = 0; i < countAmountOfSpecial; i++) {
 		if (document.getElementsByClassName("Special")[i].value === null || document.getElementsByClassName("Special")[i].value === 0 || document.getElementsByClassName("Special")[i].value === "") {
@@ -136,7 +137,7 @@ function CalculateExp() {
 		}
 	}
 	
-	var ActualMultiplier = GetMultiplier();
+	
 	//Output stuff
     var NewTotalExp = (parseInt(CurrentExp) + parseInt(ExperienceGained));
     document.getElementById("TotalExp").innerHTML = "New total experience: " + NewTotalExp.toLocaleString();
