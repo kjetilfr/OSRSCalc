@@ -132,13 +132,13 @@ function CalculateExp() {
 		}
 		else {
 			//Calculate potion experience
-            ExperienceGained += CalculateIndividualSpecialExp(document.getElementsByClassName("Special")[i].id);
+            ExperienceGained += CalculateIndividualSpecialExp(document.getElementsByClassName("Special")[i].id) * ActualMultiplier;
 		}
 	}
 	
 	var ActualMultiplier = GetMultiplier();
 	//Output stuff
-    var NewTotalExp = (parseInt(CurrentExp) + parseInt(ExperienceGained)) * ActualMultiplier;
+    var NewTotalExp = (parseInt(CurrentExp) + parseInt(ExperienceGained));
     document.getElementById("TotalExp").innerHTML = "New total experience: " + NewTotalExp.toLocaleString();
     var NewLevel = CalculateNewLevel(CurrentExp,ExperienceGained, "Herblore");
     document.getElementById("NewHerbloreLevel").innerHTML = "New herblore level: <span id='NewLevel'>" + NewLevel + "</span>, " + PercentToNewLevel(NewTotalExp) + "% to level " + (NewLevel + 1);
