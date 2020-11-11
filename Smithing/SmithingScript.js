@@ -49,13 +49,13 @@ function CalculateExp() {
             continue;
 		}else {
 			//Calculate food experience
-            ExperienceGained += CalculateIndividualSupplyExp(document.getElementsByClassName("Supply")[i].id, document.getElementsByClassName("Supply")[i].value);
+            ExperienceGained += CalculateIndividualSupplyExp(document.getElementsByClassName("Supply")[i].id, document.getElementsByClassName("Supply")[i].value) * ActualMultiplier;
 		}
 	}
 	
 	var ActualMultiplier = GetMultiplier();
 	//Output stuff
-    var NewTotalExp = (parseInt(CurrentExp) + parseInt(ExperienceGained)) * ActualMultiplier;
+    var NewTotalExp = (parseInt(CurrentExp) + parseInt(ExperienceGained));
     document.getElementById("TotalExp").innerHTML = "New total experience: " + NewTotalExp.toLocaleString();
     var NewLevel = CalculateNewLevel(CurrentExp,ExperienceGained, "Smithing");
     document.getElementById("NewSmithingLevel").innerHTML = "New smithing level: <span id='NewLevel'>" + NewLevel + "</span>, " + PercentToNewLevel(NewTotalExp) + "% to level " + (NewLevel + 1);
