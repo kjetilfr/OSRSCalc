@@ -110,7 +110,7 @@ function CalculateExp() {
 		CurrentExp = 0;
 	}var ExperienceGained = 0;
     //Go through the HERBS and calculate xp gained
-	var ActualMultiplier = GetMultiplier();
+	
     var countAmountOfHerbs = document.getElementsByClassName("Herb").length;
     for (i = 0; i < countAmountOfHerbs; i++) {
 		if (document.getElementsByClassName("Herb")[i].value === null || document.getElementsByClassName("Herb")[i].value === 0 || document.getElementsByClassName("Herb")[i].value === "") {
@@ -119,10 +119,10 @@ function CalculateExp() {
 		}else {
 			//Calculate potion experience
             ExperienceGained += CalculateIndividualHerbExp(document.getElementsByClassName("Herb")[i].id,
-			document.getElementsByClassName("Herb")[i].value) * ActualMultiplier;
+			document.getElementsByClassName("Herb")[i].value);
             //Calculate grimy experience
             ExperienceGained += CalculateGrimyExp(document.getElementsByClassName("Herb")[i].id,
-			document.getElementsByClassName("Herb")[i].value) * ActualMultiplier;
+			document.getElementsByClassName("Herb")[i].value);
 		}
 	}//Go through the SPECIAL and calculate xp gained
 	
@@ -134,10 +134,11 @@ function CalculateExp() {
 		}
 		else {
 			//Calculate potion experience
-            ExperienceGained += CalculateIndividualSpecialExp(document.getElementsByClassName("Special")[i].id) * ActualMultiplier;
+            ExperienceGained += CalculateIndividualSpecialExp(document.getElementsByClassName("Special")[i].id);
 		}
 	}
-	
+	var ActualMultiplier = GetMultiplier();
+	ExperienceGained = ExperienceGained * ActualMultiplier;
 	
 	//Output stuff
     var NewTotalExp = (parseInt(CurrentExp) + parseInt(ExperienceGained));
