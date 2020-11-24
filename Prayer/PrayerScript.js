@@ -337,11 +337,9 @@ function ExpFromHeads () {
 		totalNatureRunes += EnsouledDragon.runes.Nature * DragonHeadInput.value;
 		totalBloodRunes += EnsouledDragon.runes.Blood * DragonHeadInput.value;
 	}
-	console.log("totxp: " + totalExpGained);
 	var ActualMultiplier = GetMultiplier();
-	console.log(ActualMultiplier);
 	totalExpGained = parseInt(totalExpGained) * ActualMultiplier;
-	console.log("totxp: " + totalExpGained);
+	console.log(totalExpGained);
 	//output
 	var NewTotalExp = (parseInt(totalExpGained) + parseInt(CurrentExp) + Bones());
 	document.getElementById("TotalExp").innerHTML = NewTotalExp.toLocaleString() + " prayer experience";
