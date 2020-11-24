@@ -337,8 +337,8 @@ function ExpFromHeads () {
 		totalNatureRunes += EnsouledDragon.runes.Nature * DragonHeadInput.value;
 		totalBloodRunes += EnsouledDragon.runes.Blood * DragonHeadInput.value;
 	}
-	var ActualMultiplier = GetMultiplier();
-	totalExpGained = parseInt(totalExpGained) * ActualMultiplier;
+	
+	totalExpGained = parseInt(totalExpGained);
 	console.log(totalExpGained);
 	//output
 	var NewTotalExp = (parseInt(totalExpGained) + parseInt(CurrentExp) + Bones());
@@ -354,7 +354,8 @@ function ExpFromHeads () {
 	document.getElementById("Runes").innerHTML = "You will need " + totalSoulRunes + " " + soulRuneImg + ", " + totalNatureRunes + " " + natureRuneImg + ", " + totalBodyRunes + " " + bodyRuneImg + ", " + totalBloodRunes + " " + bloodRuneImg + ".";
 }
 function CalculateExp(AmountOfHeads, EnsouledHeadExp) {
-	return AmountOfHeads * EnsouledHeadExp;
+	var ActualMultiplier = GetMultiplier();
+	return AmountOfHeads * EnsouledHeadExp * ActualMultiplier;
 }
 function Bones() {
 	//Find all the Amount of bones that is used
@@ -476,7 +477,9 @@ function Bones() {
 				alert("Unknown Bones");
 			}
 		}
-	}return totalBoneExperience;
+	}
+	var ActualMultiplier = GetMultiplier();
+	return totalBoneExperience * ActualMultiplier;
 }
 
 function GetMultiplier() {
