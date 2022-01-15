@@ -8,22 +8,22 @@ var CurrentExp = 0;
 var EnsouledGoblin = {
 	prayer:130,
 	runes:{
-		Nature:1,
-		Body:2
+		Nature:2,
+		Body:4
 	}
 };
 var EnsouledMonkey = {
 	prayer:182,
 	runes:{
-		Nature:1,
-		Body:3
+		Nature:2,
+		Body:4
 	}
 };
 			var EnsouledImp = {
 	prayer:286,
 	runes:{
 		Nature:2,
-		Body:3
+		Body:4
 	}
 };
 var EnsouledMiniotaur = {
@@ -36,47 +36,45 @@ var EnsouledMiniotaur = {
 var EnsouledScorpion = {
 	prayer:454,
 	runes:{
-		Soul:1,
-		Nature:1
+		Nature:2,
+		Body:4
 	}
 };
 var EnsouledBear = {
 	prayer:480,
 	runes:{
-		Soul:1,
-		Nature:1,
-		Body:1
+		Nature:2,
+		Body:4
 	}
 };
 var EnsouledUnicorn = {
 	prayer:494,
 	runes:{
-		Soul:1,
-		Nature:1,
-		Body:2
+		Nature:2,
+		Body:4
 	}
 };
 var EnsouledDog = {
 	prayer:520,
 	runes:{
 		Soul:1,
-		Nature:2,
-		Body:2
+		Nature:3,
+		Body:4
 	}
 };
 var EnsouledChaosDruid = {
 	prayer:584,
 	runes:{
 		Soul:1,
-		Nature:2,
-		Body:3
+		Nature:3,
+		Body:4
 	}
 };
 var EnsouledGiant = {
 	prayer:650,
 	runes:{
 		Soul:1,
-		Nature:2,
+		Nature:3,
 		Body:4
 	}
 };
@@ -91,24 +89,24 @@ var EnsouledOgre = {
 var EnsouledElf = {
 	prayer:754,
 	runes:{
-		Soul:2,
-		Nature:2,
-		Body:2
+		Soul:1,
+		Nature:3,
+		Body:4
 	}
 };
 var EnsouledTroll = {
 	prayer:780,
 	runes:{
-		Soul:2,
-		Nature:2,
-		Body:3
+		Soul:1,
+		Nature:3,
+		Body:4
 	}
 };
 var EnsouledHorror = {
 	prayer:832,
 	runes:{
-		Soul:2,
-		Nature:2,
+		Soul:1,
+		Nature:3,
 		Body:4
 	}
 };
@@ -116,16 +114,16 @@ var EnsouledKalphite = {
 	prayer:884,
 	runes:{
 		Soul:2,
-		Nature:3,
-		Body:4
+		Blood:1,
+		Nature:3
 	}
 };
 var EnsouledDagannoth = {
 	prayer:936,
 	runes:{
-		Soul:3,
-		Nature:3,
-		Body:4
+		Soul:2,
+		Blood:1,
+		Nature:3
 	}
 };
 var EnsouledBloodveld = {
@@ -133,7 +131,7 @@ var EnsouledBloodveld = {
 	runes:{
 		Soul:2,
 		Blood:1,
-		Nature:2
+		Nature:3
 	}
 };
 var EnsouledTzHaar = {
@@ -149,14 +147,14 @@ var EnsouledDemon = {
 	runes:{
 		Soul:2,
 		Blood:1,
-		Nature:4
+		Nature:3
 	}
 };
 var EnsouledAviansie = {
 	prayer:1234,
 	runes:{
-		Soul:3,
-		Blood:1,
+		Soul:4,
+		Blood:2,
 		Nature:4
 	}
 };
@@ -164,7 +162,7 @@ var EnsouledAbyssal = {
 	prayer:1300,
 	runes:{
 		Soul:4,
-		Blood:1,
+		Blood:2,
 		Nature:4
 	}
 };
