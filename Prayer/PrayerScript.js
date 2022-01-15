@@ -214,20 +214,18 @@ function ExpFromHeads () {
 	var ScorpionHeadInput = document.getElementById("EnsouledScorpionHeadAmount");
 	if (ScorpionHeadInput.value !== null) {
 		totalExpGained += CalculateExp(ScorpionHeadInput.value, EnsouledScorpion.prayer);
-		totalSoulRunes += EnsouledScorpion.runes.Soul * ScorpionHeadInput.value;
+		totalBodyRunes += EnsouledScorpion.runes.Body * ScorpionHeadInput.value;
 		totalNatureRunes += EnsouledScorpion.runes.Nature * ScorpionHeadInput.value;
 	}
 	var BearHeadInput = document.getElementById("EnsouledBearHeadAmount");
 	if (BearHeadInput.value !== null) {
 		totalExpGained += CalculateExp(BearHeadInput.value, EnsouledBear.prayer);
-		totalSoulRunes += EnsouledBear.runes.Soul * BearHeadInput.value;
 		totalNatureRunes += EnsouledBear.runes.Nature * BearHeadInput.value;
 		totalBodyRunes += EnsouledBear.runes.Body * BearHeadInput.value;
 	}
 	var UnicornHeadInput = document.getElementById("EnsouledUnicornHeadAmount");
 	if (UnicornHeadInput.value !== null) {
 		totalExpGained += CalculateExp(UnicornHeadInput.value, EnsouledUnicorn.prayer);
-		totalSoulRunes += EnsouledUnicorn.runes.Soul * UnicornHeadInput.value;
 		totalNatureRunes += EnsouledUnicorn.runes.Nature * UnicornHeadInput.value;
 		totalBodyRunes += EnsouledUnicorn.runes.Body * UnicornHeadInput.value;
 	}
@@ -284,14 +282,14 @@ function ExpFromHeads () {
 		totalExpGained += CalculateExp(KalphiteHeadInput.value, EnsouledKalphite.prayer);
 		totalSoulRunes += EnsouledKalphite.runes.Soul * KalphiteHeadInput.value;
 		totalNatureRunes += EnsouledKalphite.runes.Nature * KalphiteHeadInput.value;
-		totalBodyRunes += EnsouledKalphite.runes.Body * KalphiteHeadInput.value;
+		totalBloodRunes += EnsouledKalphite.runes.Blood * KalphiteHeadInput.value;
 	}
 	var DagannothHeadInput = document.getElementById("EnsouledDagannothHeadAmount");
 	if (DagannothHeadInput.value !== null) {
 		totalExpGained += CalculateExp(DagannothHeadInput.value, EnsouledDagannoth.prayer);
 		totalSoulRunes += EnsouledDagannoth.runes.Soul * DagannothHeadInput.value;
 		totalNatureRunes += EnsouledDagannoth.runes.Nature * DagannothHeadInput.value;
-		totalBodyRunes += EnsouledDagannoth.runes.Body * DagannothHeadInput.value;
+		totalBloodRunes += EnsouledDagannoth.runes.Blood * DagannothHeadInput.value;
 	}
 	var BloodveldHeadInput = document.getElementById("EnsouledBloodveldHeadAmount");
 	if (BloodveldHeadInput.value !== null) {
